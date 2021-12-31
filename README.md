@@ -13,7 +13,7 @@ If you want to convert `.script` to `.js` or `.ns`, simply click the button <b>C
 If it's the opposite, click the button <b>Convert NS1 to NS2</b>.
 
 # About this tool
-I've created this converter mainly to practice coding, therefore it's in a <em>very simple<em> state right now.
+I've created this converter mainly to practice coding, therefore it's in a <em>very simple</em> state right now.
 
 However, it can be used mostly by new players of <em>Bitburner</em> who like me, used `ns1` when starting and now wants to start using `ns2`. This tool should help to more easily switch to `ns2`.
 
