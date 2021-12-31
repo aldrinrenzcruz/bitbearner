@@ -25,3 +25,6 @@ It's intended, mostly, for new players of <em>Bitburner</em> who, like me, used 
 It can also be used when helping new players in the Discord channel or other forums in general. That way, its faster to convert the scripts they're sharing for testing purposes.
 
 Feel free to use and reuse anything in this tool.
+
+# Mentions
+Special thanks to @lethern for providing the RegEx to handle the `export async main(ns)`, which is very important!
