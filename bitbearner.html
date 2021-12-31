@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Bitbearner</title>
+
+	<link rel="shortcut icon" type="image/png" href="Externals/imgs/apple-icon-57x57.png">
+
+	<link rel="stylesheet" href="Externals/stylesheets/bootstrap.min.css">
+
+	<script src="Externals/scripts/2.2.4.jquery.min.js"></script>
+
+	<link rel="stylesheet" href="Externals/icons/bootstrap/bootstrap-icons.css"/>
+
+	<style>
+        html { 
+            overflow-y: auto; 
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url("https://modernalexandria.netlify.app/Externals/imgs/background-img1.png");
+            background-repeat: repeat;
+        }
+        .navbar {
+            background-color: #004d40;
+            border-radius: 0.250rem 0.250rem 0 0;
+            max-height: 45px;
+            border-top: 1px solid #424242 !important;
+            border-left: 1px solid #424242 !important;
+            border-right: 1px solid #424242 !important;
+        }
+        .main-card {
+            background-color: #0c0d0e;
+        }
+
+        textarea{
+            background-color: #333 !important;
+			outline: none;
+			box-shadow:none !important;
+			border:1px solid #c0c0c0 !important;
+			font-family: Calibri;
+			color: #f0f0f0 !important;
+            font-size: 18px !important;
+            resize: both;
+            max-width: 100%;
+		}
+        .convert-button {
+            border: 1px solid;
+            border-color: #555;
+            border-radius: 3px;
+            padding: 10px 10px;
+            font-size: 15px;
+            text-align: center;
+            cursor: pointer;
+            color: #000;
+            background-color: #e0f2f1;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .convert-button:hover {
+            -webkit-filter: brightness(103%);
+            filter: brightness(103%);
+        }
+        .convert-button:active {
+            background-color: #e0f7fa;
+            transform: translateY(1px);
+            outline: none;
+            box-shadow: 1px #666;
+        }
+        .insert-button {
+            border: 1px solid;
+            border-color: #555;
+            border-radius: 3px;
+            padding: 10px 10px;
+            font-size: 15px;
+            text-align: center;
+            cursor: pointer;
+            color: #000;
+            background-color: #86c5f9;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .insert-button:hover {
+            -webkit-filter: brightness(103%);
+            filter: brightness(103%);
+        }
+        .insert-button:active {
+            background-color: #85d5fa;
+            transform: translateY(1px);
+            outline: none;
+            box-shadow: 1px #666;
+        }
+        .copy-button {
+            border: 1px solid;
+            border-color: #555;
+            border-radius: 3px;
+            padding: 10px 10px;
+            font-size: 15px;
+            text-align: center;
+            cursor: pointer;
+            color: #000;
+            background-color: #81c784;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .copy-button:hover {
+            -webkit-filter: brightness(103%);
+            filter: brightness(103%);
+        }
+        .copy-button:active {
+            background-color: #81c784;
+            transform: translateY(1px);
+            outline: none;
+            box-shadow: 1px #666;
+        }
+        .delete-button {
+            border: 1px solid;
+            border-color: #555;
+            border-radius: 3px;
+            padding: 10px 10px;
+            font-size: 15px;
+            text-align: center;
+            cursor: pointer;
+            color: #000;
+            background-color: #e57373;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .delete-button:hover {
+            -webkit-filter: brightness(105%);
+	        filter: brightness(105%);
+        }
+        .delete-button:active {
+            background-color: #e77e7e;
+            transform: translateY(1px);
+            outline: none;
+            box-shadow: 1px #666;
+        }
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="container mt-5">
+
+		<div class="row">
+
+			<div class="col-lg-10 mx-auto">
+
+				<div class="main-card shadow rounded overflow-hidden">
+                    <nav class="navbar navbar-expand-sm navbar-bg">
+                        <span class="navbar-brand text-white mb-0 h1 ms-3">🐻 Bitbearner</span>
+                    </nav>
+                    <form class="mx-3 mt-3" name="editorial">
+                        <textarea class="form-control styledTextarea mt-1" id="textarea3" spellcheck="false" rows="20" placeholder="Paste some code..">
+/** @param {NS} ns **/
+export async function main(ns) {
+
+}</textarea>
+                    </form>
+
+                    <div class="text-center my-3">
+                        <button class="btn convert-button" id="ns1-to-ns2" onclick="fixtext999()">Convert NS1 to NS2</button>
+                        <button class="btn convert-button" id="ns2-to-ns1" onclick="fixtext998()">Convert NS2 to NS1</button>
+                        <button class="btn insert-button cbtn" id="main-ns">Insert main(ns) function</button>
+                        <button class="btn copy-button" onclick="copy1();">Copy</button>
+                        <button class="btn delete-button" onclick="javascript:eraseText1();">Clear</button>
+                    </div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script src="../../../Externals/scripts/popper.min.js"></script>
+
+	<script src="../../../Externals/scripts/bootstrap.min.js"></script>
+
+	<script src="../../../Externals/scripts/back-to-top.js"></script>
+
+    <script>
+        function convertNS1(){
+            document.getElementById("ns1-to-ns2").disabled = true;
+            setTimeout(function() {
+                document.getElementById("ns1-to-ns2").disabled = false;
+            }, 2000);
+        }
+        document.getElementById("ns1-to-ns2").addEventListener("click", convertNS1);
+
+        function convertNS2(){
+            document.getElementById("ns2-to-ns1").disabled = true;
+            setTimeout(function() {
+                document.getElementById("ns2-to-ns1").disabled = false;
+            }, 2000);
+        }
+        document.getElementById("ns2-to-ns1").addEventListener("click", convertNS2);
+    </script>
+
+    <script>
+        //NS1 to NS2 Converter
+        function fixTex999tarea(textarea) {
+        textarea.value = textarea.value.replace("", "")
+        .replaceAll("activeFragments (", "ns.activeFragments (")
+        .replaceAll("activeFragments(", "ns.activeFragments(")
+        .replaceAll("alert (", "ns.alert (")
+        .replaceAll("alert(", "ns.alert(")
+        .replaceAll("ascendMember (", "ns.ascendMember (")
+        .replaceAll("ascendMember(", "ns.ascendMember(")
+        .replaceAll("ascensionMultiplier (", "ns.ascensionMultiplier (")
+        .replaceAll("ascensionMultiplier(", "ns.ascensionMultiplier(")
+        .replaceAll("ascensionPointsGain (", "ns.ascensionPointsGain (")
+        .replaceAll("ascensionPointsGain(", "ns.ascensionPointsGain(")
+        .replaceAll("asleep (", "await ns.asleep (")
+        .replaceAll("asleep(", "await ns.asleep(")
+        .replaceAll("atExit (", "ns.atExit (")
+        .replaceAll("atExit(", "ns.atExit(")
+        .replaceAll("attempt (", "ns.attempt (")
+        .replaceAll("attempt(", "ns.attempt(")
+        .replaceAll("brutessh (h", "ns.brutessh (h")
+        .replaceAll("brutessh(h", "ns.brutessh(h")
+        .replaceAll("buy (", "ns.buy (")
+        .replaceAll("buy(", "ns.buy(")
+        .replaceAll("cacheUpgradeCost (", "ns.cacheUpgradeCost (")
+        .replaceAll("cacheUpgradeCost(", "ns.cacheUpgradeCost(")
+        .replaceAll("calculateExp (", "ns.calculateExp (")
+        .replaceAll("calculateExp(", "ns.calculateExp(")
+        .replaceAll("calculateSkill (", "ns.calculateSkill (")
+        .replaceAll("calculateSkill(", "ns.calculateSkill(")
+        .replaceAll("cancelOrder (", "ns.cancelOrder (")
+        .replaceAll("cancelOrder(", "ns.cancelOrder(")
+        .replaceAll("canPlace (", "ns.canPlace (")
+        .replaceAll("canPlace(", "ns.canPlace(")
+        .replaceAll("canRecruitMember (", "ns.canRecruitMember (")
+        .replaceAll("canRecruitMember(", "ns.canRecruitMember(")
+        .replaceAll("charge (", "ns.charge (")
+        .replaceAll("charge(", "ns.charge(")
+        .replaceAll("clear (", "ns.clear (")
+        .replaceAll("clear (", "ns.clear (")
+        .replaceAll("clear(", "ns.clear(")
+        .replaceAll("clear(", "ns.clear(")
+        .replaceAll("clearLog (", "ns.clearLog (")
+        .replaceAll("clearLog(", "ns.clearLog(")
+        .replaceAll("clearPort (", "ns.clearPort (")
+        .replaceAll("clearPort(", "ns.clearPort(")
+        .replaceAll("constants ()", "ns.constants ()")
+        .replaceAll("constants ()", "ns.constants ()")
+        .replaceAll("constants()", "ns.constants()")
+        .replaceAll("constants()", "ns.constants()")
+        .replaceAll("coreUpgradeCost (", "ns.coreUpgradeCost (")
+        .replaceAll("coreUpgradeCost (", "ns.coreUpgradeCost (")
+        .replaceAll("coreUpgradeCost(", "ns.coreUpgradeCost(")
+        .replaceAll("coreUpgradeCost(", "ns.coreUpgradeCost(")
+        .replaceAll("createGang (", "ns.createGang (")
+        .replaceAll("createGang(", "ns.createGang(")
+        .replaceAll("deleteServer (", "ns.deleteServer (")
+        .replaceAll("deleteServer(", "ns.deleteServer(")
+        .replaceAll("disableLog (", "ns.disableLog (")
+        .replaceAll("disableLog(", "ns.disableLog(")
+        .replaceAll("enableLog (", "ns.enableLog (")
+        .replaceAll("enableLog(", "ns.enableLog(")
+        .replaceAll("exec (", "ns.exec (")
+        .replaceAll("exec(", "ns.exec(")
+        .replaceAll("exit (", "ns.exit (")
+        .replaceAll("exit(", "ns.exit(")
+        .replaceAll("expandCity (", "ns.expandCity (")
+        .replaceAll("expandCity(", "ns.expandCity(")
+        .replaceAll("expandIndustry (", "ns.expandIndustry (")
+        .replaceAll("expandIndustry(", "ns.expandIndustry(")
+        .replaceAll("fileExists (", "ns.fileExists (")
+        .replaceAll("fileExists(", "ns.fileExists(")
+        .replaceAll("flags (", "ns.flags (")
+        .replaceAll("flags(", "ns.flags(")
+        .replaceAll("fragmentDefinitions (", "ns.fragmentDefinitions (")
+        .replaceAll("fragmentDefinitions(", "ns.fragmentDefinitions(")
+        .replaceAll("ftpcrack (", "ns.ftpcrack (")
+        .replaceAll("ftpcrack(", "ns.ftpcrack(")
+        .replaceAll("get (", "ns.get (")
+        .replaceAll("get(", "ns.get(")
+        .replaceAll("getActionAutolevel (", "ns.getActionAutolevel (")
+        .replaceAll("getActionAutolevel(", "ns.getActionAutolevel(")
+        .replaceAll("getActionCountRemaining (", "ns.getActionCountRemaining (")
+        .replaceAll("getActionCountRemaining(", "ns.getActionCountRemaining(")
+        .replaceAll("getActionCurrentLevel (", "ns.getActionCurrentLevel (")
+        .replaceAll("getActionCurrentLevel(", "ns.getActionCurrentLevel(")
+        .replaceAll("getActionEstimatedSuccessChance (", "ns.getActionEstimatedSuccessChance (")
+        .replaceAll("getActionEstimatedSuccessChance(", "ns.getActionEstimatedSuccessChance(")
+        .replaceAll("getActionMaxLevel (", "ns.getActionMaxLevel (")
+        .replaceAll("getActionMaxLevel(", "ns.getActionMaxLevel(")
+        .replaceAll("getActionRepGain (", "ns.getActionRepGain (")
+        .replaceAll("getActionRepGain(", "ns.getActionRepGain(")
+        .replaceAll("getActionTime (", "ns.getActionTime (")
+        .replaceAll("getActionTime(", "ns.getActionTime(")
+        .replaceAll("getAscensionResult (", "ns.getAscensionResult (")
+        .replaceAll("getAscensionResult(", "ns.getAscensionResult(")
+        .replaceAll("getAskPrice (", "ns.getAskPrice (")
+        .replaceAll("getAskPrice(", "ns.getAskPrice(")
+        .replaceAll("getBidPrice (", "ns.getBidPrice (")
+        .replaceAll("getBidPrice(", "ns.getBidPrice(")
+        .replaceAll("getBitNodeMultipliers (", "ns.getBitNodeMultipliers (")
+        .replaceAll("getBitNodeMultipliers(", "ns.getBitNodeMultipliers(")
+        .replaceAll("getBlackOpNames (", "ns.getBlackOpNames (")
+        .replaceAll("getBlackOpNames(", "ns.getBlackOpNames(")
+        .replaceAll("getBlackOpRank (", "ns.getBlackOpRank (")
+        .replaceAll("getBlackOpRank(", "ns.getBlackOpRank(")
+        .replaceAll("getBonusTime (", "ns.getBonusTime (")
+        .replaceAll("getBonusTime (", "ns.getBonusTime (")
+        .replaceAll("getBonusTime(", "ns.getBonusTime(")
+        .replaceAll("getBonusTime(", "ns.getBonusTime(")
+        .replaceAll("getCacheUpgradeCost (", "ns.getCacheUpgradeCost (")
+        .replaceAll("getCacheUpgradeCost(", "ns.getCacheUpgradeCost(")
+        .replaceAll("getChanceToWinClash (", "ns.getChanceToWinClash (")
+        .replaceAll("getChanceToWinClash(", "ns.getChanceToWinClash(")
+        .replaceAll("getCity (", "ns.getCity (")
+        .replaceAll("getCity(", "ns.getCity(")
+        .replaceAll("getCityChaos (", "ns.getCityChaos (")
+        .replaceAll("getCityChaos(", "ns.getCityChaos(")
+        .replaceAll("getCityCommunities (", "ns.getCityCommunities (")
+        .replaceAll("getCityCommunities(", "ns.getCityCommunities(")
+        .replaceAll("getCityEstimatedPopulation (", "ns.getCityEstimatedPopulation (")
+        .replaceAll("getCityEstimatedPopulation(", "ns.getCityEstimatedPopulation(")
+        .replaceAll("getContractNames (", "ns.getContractNames (")
+        .replaceAll("getContractNames(", "ns.getContractNames(")
+        .replaceAll("getContractType (", "ns.getContractType (")
+        .replaceAll("getContractType(", "ns.getContractType(")
+        .replaceAll("getCoreUpgradeCost (", "ns.getCoreUpgradeCost (")
+        .replaceAll("getCoreUpgradeCost(", "ns.getCoreUpgradeCost(")
+        .replaceAll("getCorporation (", "ns.getCorporation (")
+        .replaceAll("getCorporation(", "ns.getCorporation(")
+        .replaceAll("getCurrentAction (", "ns.getCurrentAction (")
+        .replaceAll("getCurrentAction(", "ns.getCurrentAction(")
+        .replaceAll("getData (", "ns.getData (")
+        .replaceAll("getData(", "ns.getData(")
+        .replaceAll("getDescription (", "ns.getDescription (")
+        .replaceAll("getDescription(", "ns.getDescription(")
+        .replaceAll("getDivision (", "ns.getDivision (")
+        .replaceAll("getDivision(", "ns.getDivision(")
+        .replaceAll("getEquipmentCost (", "ns.getEquipmentCost (")
+        .replaceAll("getEquipmentCost(", "ns.getEquipmentCost(")
+        .replaceAll("getEquipmentNames (", "ns.getEquipmentNames (")
+        .replaceAll("getEquipmentNames(", "ns.getEquipmentNames(")
+        .replaceAll("getEquipmentStats (", "ns.getEquipmentStats (")
+        .replaceAll("getEquipmentStats(", "ns.getEquipmentStats(")
+        .replaceAll("getEquipmentType (", "ns.getEquipmentType (")
+        .replaceAll("getEquipmentType(", "ns.getEquipmentType(")
+        .replaceAll("getFavorToDonate (", "ns.getFavorToDonate (")
+        .replaceAll("getFavorToDonate(", "ns.getFavorToDonate(")
+        .replaceAll("getForecast (", "ns.getForecast (")
+        .replaceAll("getForecast(", "ns.getForecast(")
+        .replaceAll("getGangInformation (", "ns.getGangInformation (")
+        .replaceAll("getGangInformation(", "ns.getGangInformation(")
+        .replaceAll("getGeneralActionNames (", "ns.getGeneralActionNames (")
+        .replaceAll("getGeneralActionNames(", "ns.getGeneralActionNames(")
+        .replaceAll("getGrowTime (", "ns.getGrowTime (")
+        .replaceAll("getGrowTime(", "ns.getGrowTime(")
+        .replaceAll("getHackingLevel (", "ns.getHackingLevel (")
+        .replaceAll("getHackingLevel(", "ns.getHackingLevel(")
+        .replaceAll("getHackingMultipliers (", "ns.getHackingMultipliers (")
+        .replaceAll("getHackingMultipliers(", "ns.getHackingMultipliers(")
+        .replaceAll("getHacknetMultipliers (", "ns.getHacknetMultipliers (")
+        .replaceAll("getHacknetMultipliers(", "ns.getHacknetMultipliers(")
+        .replaceAll("getHackTime (", "ns.getHackTime (")
+        .replaceAll("getHackTime(", "ns.getHackTime(")
+        .replaceAll("getHashUpgradeLevel (", "ns.getHashUpgradeLevel (")
+        .replaceAll("getHashUpgradeLevel(", "ns.getHashUpgradeLevel(")
+        .replaceAll("getHashUpgrades (", "ns.getHashUpgrades (")
+        .replaceAll("getHashUpgrades(", "ns.getHashUpgrades(")
+        .replaceAll("getHostname (", "ns.getHostname (")
+        .replaceAll("getHostname(", "ns.getHostname(")
+        .replaceAll("getInformation (", "ns.getInformation (")
+        .replaceAll("getInformation(", "ns.getInformation(")
+        .replaceAll("getLevelUpgradeCost (", "ns.getLevelUpgradeCost (")
+        .replaceAll("getLevelUpgradeCost(", "ns.getLevelUpgradeCost(")
+        .replaceAll("getMaxShares (", "ns.getMaxShares (")
+        .replaceAll("getMaxShares(", "ns.getMaxShares(")
+        .replaceAll("getMemberInformation (", "ns.getMemberInformation (")
+        .replaceAll("getMemberInformation(", "ns.getMemberInformation(")
+        .replaceAll("getMemberNames (", "ns.getMemberNames (")
+        .replaceAll("getMemberNames(", "ns.getMemberNames(")
+        .replaceAll("getNodeStats (", "ns.getNodeStats (")
+        .replaceAll("getNodeStats(", "ns.getNodeStats(")
+        .replaceAll("getNumSleeves (", "ns.getNumSleeves (")
+        .replaceAll("getNumSleeves(", "ns.getNumSleeves(")
+        .replaceAll("getNumTriesRemaining (", "ns.getNumTriesRemaining (")
+        .replaceAll("getNumTriesRemaining(", "ns.getNumTriesRemaining(")
+        .replaceAll("getOperationNames (", "ns.getOperationNames (")
+        .replaceAll("getOperationNames(", "ns.getOperationNames(")
+        .replaceAll("getOrders (", "ns.getOrders (")
+        .replaceAll("getOrders(", "ns.getOrders(")
+        .replaceAll("getOtherGangInformation (", "ns.getOtherGangInformation (")
+        .replaceAll("getOtherGangInformation(", "ns.getOtherGangInformation(")
+        .replaceAll("getOwnedSourceFiles (", "ns.getOwnedSourceFiles (")
+        .replaceAll("getOwnedSourceFiles(", "ns.getOwnedSourceFiles(")
+        .replaceAll("getPlayer (", "ns.getPlayer (")
+        .replaceAll("getPlayer(", "ns.getPlayer(")
+        .replaceAll("getPortHandle (", "ns.getPortHandle (")
+        .replaceAll("getPortHandle(", "ns.getPortHandle(")
+        .replaceAll("getPosition (", "ns.getPosition (")
+        .replaceAll("getPosition(", "ns.getPosition(")
+        .replaceAll("getPrice (", "ns.getPrice (")
+        .replaceAll("getPrice(", "ns.getPrice(")
+        .replaceAll("getPurchaseCost (", "ns.getPurchaseCost (")
+        .replaceAll("getPurchaseCost(", "ns.getPurchaseCost(")
+        .replaceAll("getPurchasedServerCost (", "ns.getPurchasedServerCost (")
+        .replaceAll("getPurchasedServerCost(", "ns.getPurchasedServerCost(")
+        .replaceAll("getPurchasedServerLimit (", "ns.getPurchasedServerLimit (")
+        .replaceAll("getPurchasedServerLimit(", "ns.getPurchasedServerLimit(")
+        .replaceAll("getPurchasedServerMaxRam (", "ns.getPurchasedServerMaxRam (")
+        .replaceAll("getPurchasedServerMaxRam(", "ns.getPurchasedServerMaxRam(")
+        .replaceAll("getPurchasedServers (", "ns.getPurchasedServers (")
+        .replaceAll("getPurchasedServers(", "ns.getPurchasedServers(")
+        .replaceAll("getPurchaseNodeCost (", "ns.getPurchaseNodeCost (")
+        .replaceAll("getPurchaseNodeCost(", "ns.getPurchaseNodeCost(")
+        .replaceAll("getRamUpgradeCost (", "ns.getRamUpgradeCost (")
+        .replaceAll("getRamUpgradeCost(", "ns.getRamUpgradeCost(")
+        .replaceAll("getRank (", "ns.getRank (")
+        .replaceAll("getRank(", "ns.getRank(")
+        .replaceAll("getRunningScript (", "ns.getRunningScript (")
+        .replaceAll("getRunningScript(", "ns.getRunningScript(")
+        .replaceAll("getSaleGain (", "ns.getSaleGain (")
+        .replaceAll("getSaleGain(", "ns.getSaleGain(")
+        .replaceAll("getScriptExpGain (", "ns.getScriptExpGain (")
+        .replaceAll("getScriptExpGain(", "ns.getScriptExpGain(")
+        .replaceAll("getScriptIncome (", "ns.getScriptIncome (")
+        .replaceAll("getScriptIncome(", "ns.getScriptIncome(")
+        .replaceAll("getScriptLogs (", "ns.getScriptLogs (")
+        .replaceAll("getScriptLogs(", "ns.getScriptLogs(")
+        .replaceAll("getScriptName (", "ns.getScriptName (")
+        .replaceAll("getScriptName(", "ns.getScriptName(")
+        .replaceAll("getScriptRam (", "ns.getScriptRam (")
+        .replaceAll("getScriptRam(", "ns.getScriptRam(")
+        .replaceAll("getServer (", "ns.getServer (")
+        .replaceAll("getServer(", "ns.getServer(")
+        .replaceAll("getServerBaseSecurityLevel (", "ns.getServerBaseSecurityLevel (")
+        .replaceAll("getServerBaseSecurityLevel(", "ns.getServerBaseSecurityLevel(")
+        .replaceAll("getServerGrowth (", "ns.getServerGrowth (")
+        .replaceAll("getServerGrowth(", "ns.getServerGrowth(")
+        .replaceAll("getServerMaxMoney (", "ns.getServerMaxMoney (")
+        .replaceAll("getServerMaxMoney(", "ns.getServerMaxMoney(")
+        .replaceAll("getServerMaxRam (", "ns.getServerMaxRam (")
+        .replaceAll("getServerMaxRam(", "ns.getServerMaxRam(")
+        .replaceAll("getServerMinSecurityLevel (", "ns.getServerMinSecurityLevel (")
+        .replaceAll("getServerMinSecurityLevel(", "ns.getServerMinSecurityLevel(")
+        .replaceAll("getServerMoneyAvailable (", "ns.getServerMoneyAvailable (")
+        .replaceAll("getServerMoneyAvailable(", "ns.getServerMoneyAvailable(")
+        .replaceAll("getServerNumPortsRequired (", "ns.getServerNumPortsRequired (")
+        .replaceAll("getServerNumPortsRequired(", "ns.getServerNumPortsRequired(")
+        .replaceAll("getServerRam (", "ns.getServerRam (")
+        .replaceAll("getServerRam(", "ns.getServerRam(")
+        .replaceAll("getServerRequiredHackingLevel (", "ns.getServerRequiredHackingLevel (")
+        .replaceAll("getServerRequiredHackingLevel(", "ns.getServerRequiredHackingLevel(")
+        .replaceAll("getServerSecurityLevel (", "ns.getServerSecurityLevel (")
+        .replaceAll("getServerSecurityLevel(", "ns.getServerSecurityLevel(")
+        .replaceAll("getServerUsedRam (", "ns.getServerUsedRam (")
+        .replaceAll("getServerUsedRam(", "ns.getServerUsedRam(")
+        .replaceAll("getSkillLevel (", "ns.getSkillLevel (")
+        .replaceAll("getSkillLevel(", "ns.getSkillLevel(")
+        .replaceAll("getSkillNames (", "ns.getSkillNames (")
+        .replaceAll("getSkillNames(", "ns.getSkillNames(")
+        .replaceAll("getSkillPoints (", "ns.getSkillPoints (")
+        .replaceAll("getSkillPoints(", "ns.getSkillPoints(")
+        .replaceAll("getSkillUpgradeCost (", "ns.getSkillUpgradeCost (")
+        .replaceAll("getSkillUpgradeCost(", "ns.getSkillUpgradeCost(")
+        .replaceAll("getSleeveAugmentations (", "ns.getSleeveAugmentations (")
+        .replaceAll("getSleeveAugmentations(", "ns.getSleeveAugmentations(")
+        .replaceAll("getSleevePurchasableAugs (", "ns.getSleevePurchasableAugs (")
+        .replaceAll("getSleevePurchasableAugs(", "ns.getSleevePurchasableAugs(")
+        .replaceAll("getSleeveStats (", "ns.getSleeveStats (")
+        .replaceAll("getSleeveStats(", "ns.getSleeveStats(")
+        .replaceAll("getStamina (", "ns.getStamina (")
+        .replaceAll("getStamina(", "ns.getStamina(")
+        .replaceAll("getStudyMult (", "ns.getStudyMult (")
+        .replaceAll("getStudyMult(", "ns.getStudyMult(")
+        .replaceAll("getSymbols (", "ns.getSymbols (")
+        .replaceAll("getSymbols(", "ns.getSymbols(")
+        .replaceAll("getTask (", "ns.getTask (")
+        .replaceAll("getTask(", "ns.getTask(")
+        .replaceAll("getTaskNames (", "ns.getTaskNames (")
+        .replaceAll("getTaskNames(", "ns.getTaskNames(")
+        .replaceAll("getTaskStats (", "ns.getTaskStats (")
+        .replaceAll("getTaskStats(", "ns.getTaskStats(")
+        .replaceAll("getTeamSize (", "ns.getTeamSize (")
+        .replaceAll("getTeamSize(", "ns.getTeamSize(")
+        .replaceAll("getTheme (", "ns.getTheme (")
+        .replaceAll("getTheme(", "ns.getTheme(")
+        .replaceAll("getTimeSinceLastAug (", "ns.getTimeSinceLastAug (")
+        .replaceAll("getTimeSinceLastAug(", "ns.getTimeSinceLastAug(")
+        .replaceAll("getTrainingMult (", "ns.getTrainingMult (")
+        .replaceAll("getTrainingMult(", "ns.getTrainingMult(")
+        .replaceAll("getVolatility (", "ns.getVolatility (")
+        .replaceAll("getVolatility(", "ns.getVolatility(")
+        .replaceAll("getWeakenTime (", "ns.getWeakenTime (")
+        .replaceAll("getWeakenTime(", "ns.getWeakenTime(")
+        .replaceAll("grow (", "await ns.grow (")
+        .replaceAll("grow(", "await ns.grow(")
+        .replaceAll("growPercent (", "ns.growPercent (")
+        .replaceAll("growPercent(", "ns.growPercent(")
+        .replaceAll("growthAnalyze (", "ns.growthAnalyze (")
+        .replaceAll("growthAnalyze(", "ns.growthAnalyze(")
+        .replaceAll("growthAnalyzeSecurity (", "ns.growthAnalyzeSecurity (")
+        .replaceAll("growthAnalyzeSecurity(", "ns.growthAnalyzeSecurity(")
+        .replaceAll("growTime (", "ns.growTime (")
+        .replaceAll("growTime(", "ns.growTime(")
+        .replaceAll("hack (", "await ns.hack (")
+        .replaceAll("hack(", "await ns.hack(")
+        .replaceAll("hackAnalyze (", "ns.hackAnalyze (")
+        .replaceAll("hackAnalyze(", "ns.hackAnalyze(")
+        .replaceAll("hackAnalyzeChance (", "ns.hackAnalyzeChance (")
+        .replaceAll("hackAnalyzeChance(", "ns.hackAnalyzeChance(")
+        .replaceAll("hackAnalyzeSecurity (", "ns.hackAnalyzeSecurity (")
+        .replaceAll("hackAnalyzeSecurity(", "ns.hackAnalyzeSecurity(")
+        .replaceAll("hackAnalyzeThreads (", "ns.hackAnalyzeThreads (")
+        .replaceAll("hackAnalyzeThreads(", "ns.hackAnalyzeThreads(")
+        .replaceAll("hackChance (", "ns.hackChance (")
+        .replaceAll("hackChance(", "ns.hackChance(")
+        .replaceAll("hackExp (", "ns.hackExp (")
+        .replaceAll("hackExp(", "ns.hackExp(")
+        .replaceAll("hacknetNodeCost (", "ns.hacknetNodeCost (")
+        .replaceAll("hacknetNodeCost(", "ns.hacknetNodeCost(")
+        .replaceAll("hacknetServerCost (", "ns.hacknetServerCost (")
+        .replaceAll("hacknetServerCost(", "ns.hacknetServerCost(")
+        .replaceAll("hackPercent (", "ns.hackPercent (")
+        .replaceAll("hackPercent(", "ns.hackPercent(")
+        .replaceAll("hackTime (", "ns.hackTime (")
+        .replaceAll("hackTime(", "ns.hackTime(")
+        .replaceAll("hashCapacity (", "ns.hashCapacity (")
+        .replaceAll("hashCapacity(", "ns.hashCapacity(")
+        .replaceAll("hashCost (", "ns.hashCost (")
+        .replaceAll("hashCost(", "ns.hashCost(")
+        .replaceAll("hashGainRate (", "ns.hashGainRate (")
+        .replaceAll("hashGainRate(", "ns.hashGainRate(")
+        .replaceAll("hashUpgradeCost (", "ns.hashUpgradeCost (")
+        .replaceAll("hashUpgradeCost(", "ns.hashUpgradeCost(")
+        .replaceAll("hasRootAccess (", "ns.hasRootAccess (")
+        .replaceAll("hasRootAccess(", "ns.hasRootAccess(")
+        .replaceAll("height (", "ns.height (")
+        .replaceAll("height(", "ns.height(")
+        .replaceAll("httpworm (", "ns.httpworm (")
+        .replaceAll("httpworm(", "ns.httpworm(")
+        .replaceAll("inGang (", "ns.inGang (")
+        .replaceAll("inGang(", "ns.inGang(")
+        .replaceAll("isLogEnabled (", "ns.isLogEnabled (")
+        .replaceAll("isLogEnabled(", "ns.isLogEnabled(")
+        .replaceAll("isRunning (", "ns.isRunning (")
+        .replaceAll("isRunning(", "ns.isRunning(")
+        .replaceAll("issueDividends (", "ns.issueDividends (")
+        .replaceAll("issueDividends(", "ns.issueDividends(")
+        .replaceAll("joinBladeburnerDivision (", "ns.joinBladeburnerDivision (")
+        .replaceAll("joinBladeburnerDivision(", "ns.joinBladeburnerDivision(")
+        .replaceAll("joinBladeburnerFaction (", "ns.joinBladeburnerFaction (")
+        .replaceAll("joinBladeburnerFaction(", "ns.joinBladeburnerFaction(")
+        .replaceAll("kill (", "ns.kill (")
+        .replaceAll("kill(", "ns.kill(")
+        .replaceAll("killall (", "ns.killall (")
+        .replaceAll("killall(", "ns.killall(")
+        .replaceAll("levelUpgrade (", "ns.levelUpgrade (")
+        .replaceAll("levelUpgrade(", "ns.levelUpgrade(")
+        .replaceAll("levelUpgradeCost (", "ns.levelUpgradeCost (")
+        .replaceAll("levelUpgradeCost (", "ns.levelUpgradeCost (")
+        .replaceAll("levelUpgradeCost(", "ns.levelUpgradeCost(")
+        .replaceAll("levelUpgradeCost(", "ns.levelUpgradeCost(")
+        .replaceAll("ls (", "ns.ls (")
+        .replaceAll("ls(", "ns.ls(")
+        .replaceAll("maxNumNodes (", "ns.maxNumNodes (")
+        .replaceAll("maxNumNodes(", "ns.maxNumNodes(")
+        .replaceAll("moneyGain (", "ns.moneyGain (")
+        .replaceAll("moneyGain(", "ns.moneyGain(")
+        .replaceAll("moneyGainRate (", "ns.moneyGainRate (")
+        .replaceAll("moneyGainRate(", "ns.moneyGainRate(")
+        .replaceAll("nFormat (", "ns.nFormat (")
+        .replaceAll("nFormat(", "ns.nFormat(")
+        .replaceAll("nuke (", "ns.nuke (")
+        .replaceAll("nuke(", "ns.nuke(")
+        .replaceAll("numHashes (", "ns.numHashes (")
+        .replaceAll("numHashes(", "ns.numHashes(")
+        .replaceAll("numNodes (", "ns.numNodes (")
+        .replaceAll("numNodes(", "ns.numNodes(")
+        .replaceAll("peek (", "ns.peek (")
+        .replaceAll("peek(", "ns.peek(")
+        .replaceAll("place (", "ns.place (")
+        .replaceAll("place(", "ns.place(")
+        .replaceAll("placeOrder (", "ns.placeOrder (")
+        .replaceAll("placeOrder(", "ns.placeOrder(")
+        .replaceAll("print (", "ns.print (")
+        .replaceAll("print(", "ns.print(")
+        .replaceAll("prompt (", "await ns.prompt (")
+        .replaceAll("prompt(", "await ns.prompt(")
+        .replaceAll("ps (", "ns.ps (")
+        .replaceAll("ps(", "ns.ps(")
+        .replaceAll("purchase4SMarketData (", "ns.purchase4SMarketData (")
+        .replaceAll("purchase4SMarketData(", "ns.purchase4SMarketData(")
+        .replaceAll("purchase4SMarketDataTixApi (", "ns.purchase4SMarketDataTixApi (")
+        .replaceAll("purchase4SMarketDataTixApi(", "ns.purchase4SMarketDataTixApi(")
+        .replaceAll("purchaseEquipment (", "ns.purchaseEquipment (")
+        .replaceAll("purchaseEquipment(", "ns.purchaseEquipment(")
+        .replaceAll("purchaseNode (", "ns.purchaseNode (")
+        .replaceAll("purchaseNode(", "ns.purchaseNode(")
+        .replaceAll("purchaseServer (", "ns.purchaseServer (")
+        .replaceAll("purchaseServer(", "ns.purchaseServer(")
+        .replaceAll("purchaseSleeveAug (", "ns.purchaseSleeveAug (")
+        .replaceAll("purchaseSleeveAug(", "ns.purchaseSleeveAug(")
+        .replaceAll("ramUpgradeCost (", "ns.ramUpgradeCost (")
+        .replaceAll("ramUpgradeCost (", "ns.ramUpgradeCost (")
+        .replaceAll("ramUpgradeCost(", "ns.ramUpgradeCost(")
+        .replaceAll("ramUpgradeCost(", "ns.ramUpgradeCost(")
+        .replaceAll("read (", "ns.read (")
+        .replaceAll("read(", "ns.read(")
+        .replaceAll("readPort (", "ns.readPort (")
+        .replaceAll("readPort(", "ns.readPort(")
+        .replaceAll("recruitMember (", "ns.recruitMember (")
+        .replaceAll("recruitMember(", "ns.recruitMember(")
+        .replaceAll("relaysmtp (", "ns.relaysmtp (")
+        .replaceAll("relaysmtp(", "ns.relaysmtp(")
+        .replaceAll("remove (", "ns.remove (")
+        .replaceAll("remove(", "ns.remove(")
+        .replaceAll("respectGain (", "ns.respectGain (")
+        .replaceAll("respectGain(", "ns.respectGain(")
+        .replaceAll("rm (", "ns.rm (")
+        .replaceAll("rm(", "ns.rm(")
+        .replaceAll("run (", "ns.run (")
+        .replaceAll("run(", "ns.run(")
+        .replaceAll("scan (", "ns.scan (")
+        .replaceAll("scan(", "ns.scan(")
+        .replaceAll("scp (", "await ns.scp (")
+        .replaceAll("scp(", "await ns.scp(")
+        .replaceAll("scriptKill (", "ns.scriptKill (")
+        .replaceAll("scriptKill(", "ns.scriptKill(")
+        .replaceAll("scriptRunning (", "ns.scriptRunning (")
+        .replaceAll("scriptRunning(", "ns.scriptRunning(")
+        .replaceAll("sell (", "ns.sell (")
+        .replaceAll("sell(", "ns.sell(")
+        .replaceAll("sellShort (", "ns.sellShort (")
+        .replaceAll("sellShort(", "ns.sellShort(")
+        .replaceAll("serverExists (", "ns.serverExists (")
+        .replaceAll("serverExists(", "ns.serverExists(")
+        .replaceAll("setActionAutolevel (", "ns.setActionAutolevel (")
+        .replaceAll("setActionAutolevel(", "ns.setActionAutolevel(")
+        .replaceAll("setActionLevel (", "ns.setActionLevel (")
+        .replaceAll("setActionLevel(", "ns.setActionLevel(")
+        .replaceAll("setMemberTask (", "ns.setMemberTask (")
+        .replaceAll("setMemberTask(", "ns.setMemberTask(")
+        .replaceAll("setTeamSize (", "ns.setTeamSize (")
+        .replaceAll("setTeamSize(", "ns.setTeamSize(")
+        .replaceAll("setTerritoryWarfare (", "ns.setTerritoryWarfare (")
+        .replaceAll("setTerritoryWarfare(", "ns.setTerritoryWarfare(")
+        .replaceAll("setToCommitCrime (", "ns.setToCommitCrime (")
+        .replaceAll("setToCommitCrime(", "ns.setToCommitCrime(")
+        .replaceAll("setToCompanyWork (", "ns.setToCompanyWork (")
+        .replaceAll("setToCompanyWork(", "ns.setToCompanyWork(")
+        .replaceAll("setToFactionWork (", "ns.setToFactionWork (")
+        .replaceAll("setToFactionWork(", "ns.setToFactionWork(")
+        .replaceAll("setToGymWorkout (", "ns.setToGymWorkout (")
+        .replaceAll("setToGymWorkout(", "ns.setToGymWorkout(")
+        .replaceAll("setToShockRecovery (", "ns.setToShockRecovery (")
+        .replaceAll("setToShockRecovery(", "ns.setToShockRecovery(")
+        .replaceAll("setToSynchronize (", "ns.setToSynchronize (")
+        .replaceAll("setToSynchronize(", "ns.setToSynchronize(")
+        .replaceAll("setToUniversityCourse (", "ns.setToUniversityCourse (")
+        .replaceAll("setToUniversityCourse(", "ns.setToUniversityCourse(")
+        .replaceAll("short (", "ns.short (")
+        .replaceAll("short(", "ns.short(")
+        .replaceAll("sleep (", "ns.sleep (")
+        .replaceAll("sleep(", "ns.sleep(")
+        .replaceAll("spawn (", "ns.spawn (")
+        .replaceAll("spawn(", "ns.spawn(")
+        .replaceAll("spendHashes (", "ns.spendHashes (")
+        .replaceAll("spendHashes(", "ns.spendHashes(")
+        .replaceAll("sprintf (", "ns.sprintf (")
+        .replaceAll("sprintf(", "ns.sprintf(")
+        .replaceAll("sqlinject (", "ns.sqlinject (")
+        .replaceAll("sqlinject(", "ns.sqlinject(")
+        .replaceAll("startAction (", "ns.startAction (")
+        .replaceAll("startAction(", "ns.startAction(")
+        .replaceAll("stopBladeburnerAction (", "ns.stopBladeburnerAction (")
+        .replaceAll("stopBladeburnerAction(", "ns.stopBladeburnerAction(")
+        .replaceAll("switchCity (", "ns.switchCity (")
+        .replaceAll("switchCity(", "ns.switchCity(")
+        .replaceAll("tail (", "ns.tail (")
+        .replaceAll("tail(", "ns.tail(")
+        .replaceAll("tFormat (", "ns.tFormat (")
+        .replaceAll("tFormat(", "ns.tFormat(")
+        .replaceAll("toast (", "ns.toast (")
+        .replaceAll("toast(", "ns.toast(")
+        .replaceAll("tprint (", "ns.tprint (")
+        .replaceAll("tprint(", "ns.tprint(")
+        .replaceAll("tprintf (", "ns.tprintf (")
+        .replaceAll("tprintf(", "ns.tprintf(")
+        .replaceAll("travel (", "ns.travel (")
+        .replaceAll("travel(", "ns.travel(")
+        .replaceAll("tryWritePort (", "ns.tryWritePort (")
+        .replaceAll("tryWritePort(", "ns.tryWritePort(")
+        .replaceAll("unlockUpgrade (", "ns.unlockUpgrade (")
+        .replaceAll("unlockUpgrade(", "ns.unlockUpgrade(")
+        .replaceAll("upgradeCache (", "ns.upgradeCache (")
+        .replaceAll("upgradeCache(", "ns.upgradeCache(")
+        .replaceAll("upgradeCore (", "ns.upgradeCore (")
+        .replaceAll("upgradeCore(", "ns.upgradeCore(")
+        .replaceAll("upgradeLevel (", "ns.upgradeLevel (")
+        .replaceAll("upgradeLevel(", "ns.upgradeLevel(")
+        .replaceAll("upgradeRam (", "ns.upgradeRam (")
+        .replaceAll("upgradeRam(", "ns.upgradeRam(")
+        .replaceAll("upgradeSkill (", "ns.upgradeSkill (")
+        .replaceAll("upgradeSkill(", "ns.upgradeSkill(")
+        .replaceAll("vsprintf (", "ns.vsprintf (")
+        .replaceAll("vsprintf(", "ns.vsprintf(")
+        .replaceAll("wantedLevelGain (", "ns.wantedLevelGain (")
+        .replaceAll("wantedLevelGain(", "ns.wantedLevelGain(")
+        .replaceAll("wantedPenalty (", "ns.wantedPenalty (")
+        .replaceAll("wantedPenalty(", "ns.wantedPenalty(")
+        .replaceAll("weaken (", "await ns.weaken (")
+        .replaceAll("weaken(", "await ns.weaken(")
+        .replaceAll("weakenAnalyze (", "ns.weakenAnalyze (")
+        .replaceAll("weakenAnalyze(", "ns.weakenAnalyze(")
+        .replaceAll("weakenTime (", "ns.weakenTime (")
+        .replaceAll("weakenTime(", "ns.weakenTime(")
+        .replaceAll("wget (", "await ns.wget (")
+        .replaceAll("wget(", "await ns.wget(")
+        .replaceAll("width (", "ns.width (")
+        .replaceAll("width(", "ns.width(")
+        .replaceAll("write (", "await ns.write (")
+        .replaceAll("write(", "await ns.write(")
+        .replaceAll("writePort (", "await ns.writePort (")
+        .replaceAll("writePort(", "await ns.writePort(")
+        };
+
+        function fixtext999() {
+        let textarea = document.getElementById("textarea3");
+        textarea.select();
+        fixTex999tarea(textarea);
+        }
+
+        window.addEventListener('DOMContentLoaded', function(e) {
+        var area = document.getElementById("textarea3");
+
+        var getCount = function(str, search) {
+            return str.split(search).length - 1;
+        };
+
+        var replace = function(search, replaceWith) {
+            if (typeof(search) == "object") {
+            area.value = area.value.replace(search, replaceWith);
+            return;
+            }
+            if (area.value.indexOf(search) >= 0) {
+            var start = area.selectionStart;
+            var end = area.selectionEnd;
+            var textBefore = area.value.substr(0, end);
+            var lengthDiff = (replaceWith.length - search.length) * getCount(textBefore, search);
+            area.value = area.value.replace(search, replaceWith);
+            area.selectionStart = start + lengthDiff;
+            area.selectionEnd = end + lengthDiff;
+            }
+        };
+        });
+    </script>
+
+    <script>
+        //NS2 to NS1 Converter
+        function fixTex998tarea(textarea) {
+        textarea.value = textarea.value.replace("", "")
+        .replaceAll("ns.activeFragments (", "activeFragments (")
+        .replaceAll("ns.activeFragments(", "activeFragments(")
+        .replaceAll("ns.alert (", "alert (")
+        .replaceAll("ns.alert(", "alert(")
+        .replaceAll("ns.ascendMember (", "ascendMember (")
+        .replaceAll("ns.ascendMember(", "ascendMember(")
+        .replaceAll("ns.ascensionMultiplier (", "ascensionMultiplier (")
+        .replaceAll("ns.ascensionMultiplier(", "ascensionMultiplier(")
+        .replaceAll("ns.ascensionPointsGain (", "ascensionPointsGain (")
+        .replaceAll("ns.ascensionPointsGain(", "ascensionPointsGain(")
+        .replaceAll("await ns.asleep (", "asleep (")
+        .replaceAll("await ns.asleep(", "asleep(")
+        .replaceAll("ns.atExit (", "atExit (")
+        .replaceAll("ns.atExit(", "atExit(")
+        .replaceAll("ns.attempt (", "attempt (")
+        .replaceAll("ns.attempt(", "attempt(")
+        .replaceAll("ns.brutessh (h", "brutessh (h")
+        .replaceAll("ns.brutessh(h", "brutessh(h")
+        .replaceAll("ns.buy (", "buy (")
+        .replaceAll("ns.buy(", "buy(")
+        .replaceAll("ns.cacheUpgradeCost (", "cacheUpgradeCost (")
+        .replaceAll("ns.cacheUpgradeCost(", "cacheUpgradeCost(")
+        .replaceAll("ns.calculateExp (", "calculateExp (")
+        .replaceAll("ns.calculateExp(", "calculateExp(")
+        .replaceAll("ns.calculateSkill (", "calculateSkill (")
+        .replaceAll("ns.calculateSkill(", "calculateSkill(")
+        .replaceAll("ns.cancelOrder (", "cancelOrder (")
+        .replaceAll("ns.cancelOrder(", "cancelOrder(")
+        .replaceAll("ns.canPlace (", "canPlace (")
+        .replaceAll("ns.canPlace(", "canPlace(")
+        .replaceAll("ns.canRecruitMember (", "canRecruitMember (")
+        .replaceAll("ns.canRecruitMember(", "canRecruitMember(")
+        .replaceAll("ns.charge (", "charge (")
+        .replaceAll("ns.charge(", "charge(")
+        .replaceAll("ns.clear (", "clear (")
+        .replaceAll("ns.clear (", "clear (")
+        .replaceAll("ns.clear(", "clear(")
+        .replaceAll("ns.clear(", "clear(")
+        .replaceAll("ns.clearLog (", "clearLog (")
+        .replaceAll("ns.clearLog(", "clearLog(")
+        .replaceAll("ns.clearPort (", "clearPort (")
+        .replaceAll("ns.clearPort(", "clearPort(")
+        .replaceAll("ns.constants ()", "constants ()")
+        .replaceAll("ns.constants ()", "constants ()")
+        .replaceAll("ns.constants()", "constants()")
+        .replaceAll("ns.constants()", "constants()")
+        .replaceAll("ns.coreUpgradeCost (", "coreUpgradeCost (")
+        .replaceAll("ns.coreUpgradeCost (", "coreUpgradeCost (")
+        .replaceAll("ns.coreUpgradeCost(", "coreUpgradeCost(")
+        .replaceAll("ns.coreUpgradeCost(", "coreUpgradeCost(")
+        .replaceAll("ns.createGang (", "createGang (")
+        .replaceAll("ns.createGang(", "createGang(")
+        .replaceAll("ns.deleteServer (", "deleteServer (")
+        .replaceAll("ns.deleteServer(", "deleteServer(")
+        .replaceAll("ns.disableLog (", "disableLog (")
+        .replaceAll("ns.disableLog(", "disableLog(")
+        .replaceAll("ns.enableLog (", "enableLog (")
+        .replaceAll("ns.enableLog(", "enableLog(")
+        .replaceAll("ns.exec (", "exec (")
+        .replaceAll("ns.exec(", "exec(")
+        .replaceAll("ns.exit (", "exit (")
+        .replaceAll("ns.exit(", "exit(")
+        .replaceAll("ns.expandCity (", "expandCity (")
+        .replaceAll("ns.expandCity(", "expandCity(")
+        .replaceAll("ns.expandIndustry (", "expandIndustry (")
+        .replaceAll("ns.expandIndustry(", "expandIndustry(")
+        .replaceAll("ns.fileExists (", "fileExists (")
+        .replaceAll("ns.fileExists(", "fileExists(")
+        .replaceAll("ns.flags (", "flags (")
+        .replaceAll("ns.flags(", "flags(")
+        .replaceAll("ns.fragmentDefinitions (", "fragmentDefinitions (")
+        .replaceAll("ns.fragmentDefinitions(", "fragmentDefinitions(")
+        .replaceAll("ns.ftpcrack (", "ftpcrack (")
+        .replaceAll("ns.ftpcrack(", "ftpcrack(")
+        .replaceAll("ns.get (", "get (")
+        .replaceAll("ns.get(", "get(")
+        .replaceAll("ns.getActionAutolevel (", "getActionAutolevel (")
+        .replaceAll("ns.getActionAutolevel(", "getActionAutolevel(")
+        .replaceAll("ns.getActionCountRemaining (", "getActionCountRemaining (")
+        .replaceAll("ns.getActionCountRemaining(", "getActionCountRemaining(")
+        .replaceAll("ns.getActionCurrentLevel (", "getActionCurrentLevel (")
+        .replaceAll("ns.getActionCurrentLevel(", "getActionCurrentLevel(")
+        .replaceAll("ns.getActionEstimatedSuccessChance (", "getActionEstimatedSuccessChance (")
+        .replaceAll("ns.getActionEstimatedSuccessChance(", "getActionEstimatedSuccessChance(")
+        .replaceAll("ns.getActionMaxLevel (", "getActionMaxLevel (")
+        .replaceAll("ns.getActionMaxLevel(", "getActionMaxLevel(")
+        .replaceAll("ns.getActionRepGain (", "getActionRepGain (")
+        .replaceAll("ns.getActionRepGain(", "getActionRepGain(")
+        .replaceAll("ns.getActionTime (", "getActionTime (")
+        .replaceAll("ns.getActionTime(", "getActionTime(")
+        .replaceAll("ns.getAscensionResult (", "getAscensionResult (")
+        .replaceAll("ns.getAscensionResult(", "getAscensionResult(")
+        .replaceAll("ns.getAskPrice (", "getAskPrice (")
+        .replaceAll("ns.getAskPrice(", "getAskPrice(")
+        .replaceAll("ns.getBidPrice (", "getBidPrice (")
+        .replaceAll("ns.getBidPrice(", "getBidPrice(")
+        .replaceAll("ns.getBitNodeMultipliers (", "getBitNodeMultipliers (")
+        .replaceAll("ns.getBitNodeMultipliers(", "getBitNodeMultipliers(")
+        .replaceAll("ns.getBlackOpNames (", "getBlackOpNames (")
+        .replaceAll("ns.getBlackOpNames(", "getBlackOpNames(")
+        .replaceAll("ns.getBlackOpRank (", "getBlackOpRank (")
+        .replaceAll("ns.getBlackOpRank(", "getBlackOpRank(")
+        .replaceAll("ns.getBonusTime (", "getBonusTime (")
+        .replaceAll("ns.getBonusTime (", "getBonusTime (")
+        .replaceAll("ns.getBonusTime(", "getBonusTime(")
+        .replaceAll("ns.getBonusTime(", "getBonusTime(")
+        .replaceAll("ns.getCacheUpgradeCost (", "getCacheUpgradeCost (")
+        .replaceAll("ns.getCacheUpgradeCost(", "getCacheUpgradeCost(")
+        .replaceAll("ns.getChanceToWinClash (", "getChanceToWinClash (")
+        .replaceAll("ns.getChanceToWinClash(", "getChanceToWinClash(")
+        .replaceAll("ns.getCity (", "getCity (")
+        .replaceAll("ns.getCity(", "getCity(")
+        .replaceAll("ns.getCityChaos (", "getCityChaos (")
+        .replaceAll("ns.getCityChaos(", "getCityChaos(")
+        .replaceAll("ns.getCityCommunities (", "getCityCommunities (")
+        .replaceAll("ns.getCityCommunities(", "getCityCommunities(")
+        .replaceAll("ns.getCityEstimatedPopulation (", "getCityEstimatedPopulation (")
+        .replaceAll("ns.getCityEstimatedPopulation(", "getCityEstimatedPopulation(")
+        .replaceAll("ns.getContractNames (", "getContractNames (")
+        .replaceAll("ns.getContractNames(", "getContractNames(")
+        .replaceAll("ns.getContractType (", "getContractType (")
+        .replaceAll("ns.getContractType(", "getContractType(")
+        .replaceAll("ns.getCoreUpgradeCost (", "getCoreUpgradeCost (")
+        .replaceAll("ns.getCoreUpgradeCost(", "getCoreUpgradeCost(")
+        .replaceAll("ns.getCorporation (", "getCorporation (")
+        .replaceAll("ns.getCorporation(", "getCorporation(")
+        .replaceAll("ns.getCurrentAction (", "getCurrentAction (")
+        .replaceAll("ns.getCurrentAction(", "getCurrentAction(")
+        .replaceAll("ns.getData (", "getData (")
+        .replaceAll("ns.getData(", "getData(")
+        .replaceAll("ns.getDescription (", "getDescription (")
+        .replaceAll("ns.getDescription(", "getDescription(")
+        .replaceAll("ns.getDivision (", "getDivision (")
+        .replaceAll("ns.getDivision(", "getDivision(")
+        .replaceAll("ns.getEquipmentCost (", "getEquipmentCost (")
+        .replaceAll("ns.getEquipmentCost(", "getEquipmentCost(")
+        .replaceAll("ns.getEquipmentNames (", "getEquipmentNames (")
+        .replaceAll("ns.getEquipmentNames(", "getEquipmentNames(")
+        .replaceAll("ns.getEquipmentStats (", "getEquipmentStats (")
+        .replaceAll("ns.getEquipmentStats(", "getEquipmentStats(")
+        .replaceAll("ns.getEquipmentType (", "getEquipmentType (")
+        .replaceAll("ns.getEquipmentType(", "getEquipmentType(")
+        .replaceAll("ns.getFavorToDonate (", "getFavorToDonate (")
+        .replaceAll("ns.getFavorToDonate(", "getFavorToDonate(")
+        .replaceAll("ns.getForecast (", "getForecast (")
+        .replaceAll("ns.getForecast(", "getForecast(")
+        .replaceAll("ns.getGangInformation (", "getGangInformation (")
+        .replaceAll("ns.getGangInformation(", "getGangInformation(")
+        .replaceAll("ns.getGeneralActionNames (", "getGeneralActionNames (")
+        .replaceAll("ns.getGeneralActionNames(", "getGeneralActionNames(")
+        .replaceAll("ns.getGrowTime (", "getGrowTime (")
+        .replaceAll("ns.getGrowTime(", "getGrowTime(")
+        .replaceAll("ns.getHackingLevel (", "getHackingLevel (")
+        .replaceAll("ns.getHackingLevel(", "getHackingLevel(")
+        .replaceAll("ns.getHackingMultipliers (", "getHackingMultipliers (")
+        .replaceAll("ns.getHackingMultipliers(", "getHackingMultipliers(")
+        .replaceAll("ns.getHacknetMultipliers (", "getHacknetMultipliers (")
+        .replaceAll("ns.getHacknetMultipliers(", "getHacknetMultipliers(")
+        .replaceAll("ns.getHackTime (", "getHackTime (")
+        .replaceAll("ns.getHackTime(", "getHackTime(")
+        .replaceAll("ns.getHashUpgradeLevel (", "getHashUpgradeLevel (")
+        .replaceAll("ns.getHashUpgradeLevel(", "getHashUpgradeLevel(")
+        .replaceAll("ns.getHashUpgrades (", "getHashUpgrades (")
+        .replaceAll("ns.getHashUpgrades(", "getHashUpgrades(")
+        .replaceAll("ns.getHostname (", "getHostname (")
+        .replaceAll("ns.getHostname(", "getHostname(")
+        .replaceAll("ns.getInformation (", "getInformation (")
+        .replaceAll("ns.getInformation(", "getInformation(")
+        .replaceAll("ns.getLevelUpgradeCost (", "getLevelUpgradeCost (")
+        .replaceAll("ns.getLevelUpgradeCost(", "getLevelUpgradeCost(")
+        .replaceAll("ns.getMaxShares (", "getMaxShares (")
+        .replaceAll("ns.getMaxShares(", "getMaxShares(")
+        .replaceAll("ns.getMemberInformation (", "getMemberInformation (")
+        .replaceAll("ns.getMemberInformation(", "getMemberInformation(")
+        .replaceAll("ns.getMemberNames (", "getMemberNames (")
+        .replaceAll("ns.getMemberNames(", "getMemberNames(")
+        .replaceAll("ns.getNodeStats (", "getNodeStats (")
+        .replaceAll("ns.getNodeStats(", "getNodeStats(")
+        .replaceAll("ns.getNumSleeves (", "getNumSleeves (")
+        .replaceAll("ns.getNumSleeves(", "getNumSleeves(")
+        .replaceAll("ns.getNumTriesRemaining (", "getNumTriesRemaining (")
+        .replaceAll("ns.getNumTriesRemaining(", "getNumTriesRemaining(")
+        .replaceAll("ns.getOperationNames (", "getOperationNames (")
+        .replaceAll("ns.getOperationNames(", "getOperationNames(")
+        .replaceAll("ns.getOrders (", "getOrders (")
+        .replaceAll("ns.getOrders(", "getOrders(")
+        .replaceAll("ns.getOtherGangInformation (", "getOtherGangInformation (")
+        .replaceAll("ns.getOtherGangInformation(", "getOtherGangInformation(")
+        .replaceAll("ns.getOwnedSourceFiles (", "getOwnedSourceFiles (")
+        .replaceAll("ns.getOwnedSourceFiles(", "getOwnedSourceFiles(")
+        .replaceAll("ns.getPlayer (", "getPlayer (")
+        .replaceAll("ns.getPlayer(", "getPlayer(")
+        .replaceAll("ns.getPortHandle (", "getPortHandle (")
+        .replaceAll("ns.getPortHandle(", "getPortHandle(")
+        .replaceAll("ns.getPosition (", "getPosition (")
+        .replaceAll("ns.getPosition(", "getPosition(")
+        .replaceAll("ns.getPrice (", "getPrice (")
+        .replaceAll("ns.getPrice(", "getPrice(")
+        .replaceAll("ns.getPurchaseCost (", "getPurchaseCost (")
+        .replaceAll("ns.getPurchaseCost(", "getPurchaseCost(")
+        .replaceAll("ns.getPurchasedServerCost (", "getPurchasedServerCost (")
+        .replaceAll("ns.getPurchasedServerCost(", "getPurchasedServerCost(")
+        .replaceAll("ns.getPurchasedServerLimit (", "getPurchasedServerLimit (")
+        .replaceAll("ns.getPurchasedServerLimit(", "getPurchasedServerLimit(")
+        .replaceAll("ns.getPurchasedServerMaxRam (", "getPurchasedServerMaxRam (")
+        .replaceAll("ns.getPurchasedServerMaxRam(", "getPurchasedServerMaxRam(")
+        .replaceAll("ns.getPurchasedServers (", "getPurchasedServers (")
+        .replaceAll("ns.getPurchasedServers(", "getPurchasedServers(")
+        .replaceAll("ns.getPurchaseNodeCost (", "getPurchaseNodeCost (")
+        .replaceAll("ns.getPurchaseNodeCost(", "getPurchaseNodeCost(")
+        .replaceAll("ns.getRamUpgradeCost (", "getRamUpgradeCost (")
+        .replaceAll("ns.getRamUpgradeCost(", "getRamUpgradeCost(")
+        .replaceAll("ns.getRank (", "getRank (")
+        .replaceAll("ns.getRank(", "getRank(")
+        .replaceAll("ns.getRunningScript (", "getRunningScript (")
+        .replaceAll("ns.getRunningScript(", "getRunningScript(")
+        .replaceAll("ns.getSaleGain (", "getSaleGain (")
+        .replaceAll("ns.getSaleGain(", "getSaleGain(")
+        .replaceAll("ns.getScriptExpGain (", "getScriptExpGain (")
+        .replaceAll("ns.getScriptExpGain(", "getScriptExpGain(")
+        .replaceAll("ns.getScriptIncome (", "getScriptIncome (")
+        .replaceAll("ns.getScriptIncome(", "getScriptIncome(")
+        .replaceAll("ns.getScriptLogs (", "getScriptLogs (")
+        .replaceAll("ns.getScriptLogs(", "getScriptLogs(")
+        .replaceAll("ns.getScriptName (", "getScriptName (")
+        .replaceAll("ns.getScriptName(", "getScriptName(")
+        .replaceAll("ns.getScriptRam (", "getScriptRam (")
+        .replaceAll("ns.getScriptRam(", "getScriptRam(")
+        .replaceAll("ns.getServer (", "getServer (")
+        .replaceAll("ns.getServer(", "getServer(")
+        .replaceAll("ns.getServerBaseSecurityLevel (", "getServerBaseSecurityLevel (")
+        .replaceAll("ns.getServerBaseSecurityLevel(", "getServerBaseSecurityLevel(")
+        .replaceAll("ns.getServerGrowth (", "getServerGrowth (")
+        .replaceAll("ns.getServerGrowth(", "getServerGrowth(")
+        .replaceAll("ns.getServerMaxMoney (", "getServerMaxMoney (")
+        .replaceAll("ns.getServerMaxMoney(", "getServerMaxMoney(")
+        .replaceAll("ns.getServerMaxRam (", "getServerMaxRam (")
+        .replaceAll("ns.getServerMaxRam(", "getServerMaxRam(")
+        .replaceAll("ns.getServerMinSecurityLevel (", "getServerMinSecurityLevel (")
+        .replaceAll("ns.getServerMinSecurityLevel(", "getServerMinSecurityLevel(")
+        .replaceAll("ns.getServerMoneyAvailable (", "getServerMoneyAvailable (")
+        .replaceAll("ns.getServerMoneyAvailable(", "getServerMoneyAvailable(")
+        .replaceAll("ns.getServerNumPortsRequired (", "getServerNumPortsRequired (")
+        .replaceAll("ns.getServerNumPortsRequired(", "getServerNumPortsRequired(")
+        .replaceAll("ns.getServerRam (", "getServerRam (")
+        .replaceAll("ns.getServerRam(", "getServerRam(")
+        .replaceAll("ns.getServerRequiredHackingLevel (", "getServerRequiredHackingLevel (")
+        .replaceAll("ns.getServerRequiredHackingLevel(", "getServerRequiredHackingLevel(")
+        .replaceAll("ns.getServerSecurityLevel (", "getServerSecurityLevel (")
+        .replaceAll("ns.getServerSecurityLevel(", "getServerSecurityLevel(")
+        .replaceAll("ns.getServerUsedRam (", "getServerUsedRam (")
+        .replaceAll("ns.getServerUsedRam(", "getServerUsedRam(")
+        .replaceAll("ns.getSkillLevel (", "getSkillLevel (")
+        .replaceAll("ns.getSkillLevel(", "getSkillLevel(")
+        .replaceAll("ns.getSkillNames (", "getSkillNames (")
+        .replaceAll("ns.getSkillNames(", "getSkillNames(")
+        .replaceAll("ns.getSkillPoints (", "getSkillPoints (")
+        .replaceAll("ns.getSkillPoints(", "getSkillPoints(")
+        .replaceAll("ns.getSkillUpgradeCost (", "getSkillUpgradeCost (")
+        .replaceAll("ns.getSkillUpgradeCost(", "getSkillUpgradeCost(")
+        .replaceAll("ns.getSleeveAugmentations (", "getSleeveAugmentations (")
+        .replaceAll("ns.getSleeveAugmentations(", "getSleeveAugmentations(")
+        .replaceAll("ns.getSleevePurchasableAugs (", "getSleevePurchasableAugs (")
+        .replaceAll("ns.getSleevePurchasableAugs(", "getSleevePurchasableAugs(")
+        .replaceAll("ns.getSleeveStats (", "getSleeveStats (")
+        .replaceAll("ns.getSleeveStats(", "getSleeveStats(")
+        .replaceAll("ns.getStamina (", "getStamina (")
+        .replaceAll("ns.getStamina(", "getStamina(")
+        .replaceAll("ns.getStudyMult (", "getStudyMult (")
+        .replaceAll("ns.getStudyMult(", "getStudyMult(")
+        .replaceAll("ns.getSymbols (", "getSymbols (")
+        .replaceAll("ns.getSymbols(", "getSymbols(")
+        .replaceAll("ns.getTask (", "getTask (")
+        .replaceAll("ns.getTask(", "getTask(")
+        .replaceAll("ns.getTaskNames (", "getTaskNames (")
+        .replaceAll("ns.getTaskNames(", "getTaskNames(")
+        .replaceAll("ns.getTaskStats (", "getTaskStats (")
+        .replaceAll("ns.getTaskStats(", "getTaskStats(")
+        .replaceAll("ns.getTeamSize (", "getTeamSize (")
+        .replaceAll("ns.getTeamSize(", "getTeamSize(")
+        .replaceAll("ns.getTheme (", "getTheme (")
+        .replaceAll("ns.getTheme(", "getTheme(")
+        .replaceAll("ns.getTimeSinceLastAug (", "getTimeSinceLastAug (")
+        .replaceAll("ns.getTimeSinceLastAug(", "getTimeSinceLastAug(")
+        .replaceAll("ns.getTrainingMult (", "getTrainingMult (")
+        .replaceAll("ns.getTrainingMult(", "getTrainingMult(")
+        .replaceAll("ns.getVolatility (", "getVolatility (")
+        .replaceAll("ns.getVolatility(", "getVolatility(")
+        .replaceAll("ns.getWeakenTime (", "getWeakenTime (")
+        .replaceAll("ns.getWeakenTime(", "getWeakenTime(")
+        .replaceAll("await ns.grow (", "grow (")
+        .replaceAll("await ns.grow(", "grow(")
+        .replaceAll("ns.growPercent (", "growPercent (")
+        .replaceAll("ns.growPercent(", "growPercent(")
+        .replaceAll("ns.growthAnalyze (", "growthAnalyze (")
+        .replaceAll("ns.growthAnalyze(", "growthAnalyze(")
+        .replaceAll("ns.growthAnalyzeSecurity (", "growthAnalyzeSecurity (")
+        .replaceAll("ns.growthAnalyzeSecurity(", "growthAnalyzeSecurity(")
+        .replaceAll("ns.growTime (", "growTime (")
+        .replaceAll("ns.growTime(", "growTime(")
+        .replaceAll("await ns.hack (", "hack (")
+        .replaceAll("await ns.hack(", "hack(")
+        .replaceAll("ns.hackAnalyze (", "hackAnalyze (")
+        .replaceAll("ns.hackAnalyze(", "hackAnalyze(")
+        .replaceAll("ns.hackAnalyzeChance (", "hackAnalyzeChance (")
+        .replaceAll("ns.hackAnalyzeChance(", "hackAnalyzeChance(")
+        .replaceAll("ns.hackAnalyzeSecurity (", "hackAnalyzeSecurity (")
+        .replaceAll("ns.hackAnalyzeSecurity(", "hackAnalyzeSecurity(")
+        .replaceAll("ns.hackAnalyzeThreads (", "hackAnalyzeThreads (")
+        .replaceAll("ns.hackAnalyzeThreads(", "hackAnalyzeThreads(")
+        .replaceAll("ns.hackChance (", "hackChance (")
+        .replaceAll("ns.hackChance(", "hackChance(")
+        .replaceAll("ns.hackExp (", "hackExp (")
+        .replaceAll("ns.hackExp(", "hackExp(")
+        .replaceAll("ns.hacknetNodeCost (", "hacknetNodeCost (")
+        .replaceAll("ns.hacknetNodeCost(", "hacknetNodeCost(")
+        .replaceAll("ns.hacknetServerCost (", "hacknetServerCost (")
+        .replaceAll("ns.hacknetServerCost(", "hacknetServerCost(")
+        .replaceAll("ns.hackPercent (", "hackPercent (")
+        .replaceAll("ns.hackPercent(", "hackPercent(")
+        .replaceAll("ns.hackTime (", "hackTime (")
+        .replaceAll("ns.hackTime(", "hackTime(")
+        .replaceAll("ns.hashCapacity (", "hashCapacity (")
+        .replaceAll("ns.hashCapacity(", "hashCapacity(")
+        .replaceAll("ns.hashCost (", "hashCost (")
+        .replaceAll("ns.hashCost(", "hashCost(")
+        .replaceAll("ns.hashGainRate (", "hashGainRate (")
+        .replaceAll("ns.hashGainRate(", "hashGainRate(")
+        .replaceAll("ns.hashUpgradeCost (", "hashUpgradeCost (")
+        .replaceAll("ns.hashUpgradeCost(", "hashUpgradeCost(")
+        .replaceAll("ns.hasRootAccess (", "hasRootAccess (")
+        .replaceAll("ns.hasRootAccess(", "hasRootAccess(")
+        .replaceAll("ns.height (", "height (")
+        .replaceAll("ns.height(", "height(")
+        .replaceAll("ns.httpworm (", "httpworm (")
+        .replaceAll("ns.httpworm(", "httpworm(")
+        .replaceAll("ns.inGang (", "inGang (")
+        .replaceAll("ns.inGang(", "inGang(")
+        .replaceAll("ns.isLogEnabled (", "isLogEnabled (")
+        .replaceAll("ns.isLogEnabled(", "isLogEnabled(")
+        .replaceAll("ns.isRunning (", "isRunning (")
+        .replaceAll("ns.isRunning(", "isRunning(")
+        .replaceAll("ns.issueDividends (", "issueDividends (")
+        .replaceAll("ns.issueDividends(", "issueDividends(")
+        .replaceAll("ns.joinBladeburnerDivision (", "joinBladeburnerDivision (")
+        .replaceAll("ns.joinBladeburnerDivision(", "joinBladeburnerDivision(")
+        .replaceAll("ns.joinBladeburnerFaction (", "joinBladeburnerFaction (")
+        .replaceAll("ns.joinBladeburnerFaction(", "joinBladeburnerFaction(")
+        .replaceAll("ns.kill (", "kill (")
+        .replaceAll("ns.kill(", "kill(")
+        .replaceAll("ns.killall (", "killall (")
+        .replaceAll("ns.killall(", "killall(")
+        .replaceAll("ns.levelUpgrade (", "levelUpgrade (")
+        .replaceAll("ns.levelUpgrade(", "levelUpgrade(")
+        .replaceAll("ns.levelUpgradeCost (", "levelUpgradeCost (")
+        .replaceAll("ns.levelUpgradeCost (", "levelUpgradeCost (")
+        .replaceAll("ns.levelUpgradeCost(", "levelUpgradeCost(")
+        .replaceAll("ns.levelUpgradeCost(", "levelUpgradeCost(")
+        .replaceAll("ns.ls (", "ls (")
+        .replaceAll("ns.ls(", "ls(")
+        .replaceAll("ns.maxNumNodes (", "maxNumNodes (")
+        .replaceAll("ns.maxNumNodes(", "maxNumNodes(")
+        .replaceAll("ns.moneyGain (", "moneyGain (")
+        .replaceAll("ns.moneyGain(", "moneyGain(")
+        .replaceAll("ns.moneyGainRate (", "moneyGainRate (")
+        .replaceAll("ns.moneyGainRate(", "moneyGainRate(")
+        .replaceAll("ns.nFormat (", "nFormat (")
+        .replaceAll("ns.nFormat(", "nFormat(")
+        .replaceAll("ns.nuke (", "nuke (")
+        .replaceAll("ns.nuke(", "nuke(")
+        .replaceAll("ns.numHashes (", "numHashes (")
+        .replaceAll("ns.numHashes(", "numHashes(")
+        .replaceAll("ns.numNodes (", "numNodes (")
+        .replaceAll("ns.numNodes(", "numNodes(")
+        .replaceAll("ns.peek (", "peek (")
+        .replaceAll("ns.peek(", "peek(")
+        .replaceAll("ns.place (", "place (")
+        .replaceAll("ns.place(", "place(")
+        .replaceAll("ns.placeOrder (", "placeOrder (")
+        .replaceAll("ns.placeOrder(", "placeOrder(")
+        .replaceAll("ns.print (", "print (")
+        .replaceAll("ns.print(", "print(")
+        .replaceAll("await ns.prompt (", "prompt (")
+        .replaceAll("await ns.prompt(", "prompt(")
+        .replaceAll("ns.ps (", "ps (")
+        .replaceAll("ns.ps(", "ps(")
+        .replaceAll("ns.purchase4SMarketData (", "purchase4SMarketData (")
+        .replaceAll("ns.purchase4SMarketData(", "purchase4SMarketData(")
+        .replaceAll("ns.purchase4SMarketDataTixApi (", "purchase4SMarketDataTixApi (")
+        .replaceAll("ns.purchase4SMarketDataTixApi(", "purchase4SMarketDataTixApi(")
+        .replaceAll("ns.purchaseEquipment (", "purchaseEquipment (")
+        .replaceAll("ns.purchaseEquipment(", "purchaseEquipment(")
+        .replaceAll("ns.purchaseNode (", "purchaseNode (")
+        .replaceAll("ns.purchaseNode(", "purchaseNode(")
+        .replaceAll("ns.purchaseServer (", "purchaseServer (")
+        .replaceAll("ns.purchaseServer(", "purchaseServer(")
+        .replaceAll("ns.purchaseSleeveAug (", "purchaseSleeveAug (")
+        .replaceAll("ns.purchaseSleeveAug(", "purchaseSleeveAug(")
+        .replaceAll("ns.ramUpgradeCost (", "ramUpgradeCost (")
+        .replaceAll("ns.ramUpgradeCost (", "ramUpgradeCost (")
+        .replaceAll("ns.ramUpgradeCost(", "ramUpgradeCost(")
+        .replaceAll("ns.ramUpgradeCost(", "ramUpgradeCost(")
+        .replaceAll("ns.read (", "read (")
+        .replaceAll("ns.read(", "read(")
+        .replaceAll("ns.readPort (", "readPort (")
+        .replaceAll("ns.readPort(", "readPort(")
+        .replaceAll("ns.recruitMember (", "recruitMember (")
+        .replaceAll("ns.recruitMember(", "recruitMember(")
+        .replaceAll("ns.relaysmtp (", "relaysmtp (")
+        .replaceAll("ns.relaysmtp(", "relaysmtp(")
+        .replaceAll("ns.remove (", "remove (")
+        .replaceAll("ns.remove(", "remove(")
+        .replaceAll("ns.respectGain (", "respectGain (")
+        .replaceAll("ns.respectGain(", "respectGain(")
+        .replaceAll("ns.rm (", "rm (")
+        .replaceAll("ns.rm(", "rm(")
+        .replaceAll("ns.run (", "run (")
+        .replaceAll("ns.run(", "run(")
+        .replaceAll("ns.scan (", "scan (")
+        .replaceAll("ns.scan(", "scan(")
+        .replaceAll("await ns.scp (", "scp (")
+        .replaceAll("await ns.scp(", "scp(")
+        .replaceAll("ns.scriptKill (", "scriptKill (")
+        .replaceAll("ns.scriptKill(", "scriptKill(")
+        .replaceAll("ns.scriptRunning (", "scriptRunning (")
+        .replaceAll("ns.scriptRunning(", "scriptRunning(")
+        .replaceAll("ns.sell (", "sell (")
+        .replaceAll("ns.sell(", "sell(")
+        .replaceAll("ns.sellShort (", "sellShort (")
+        .replaceAll("ns.sellShort(", "sellShort(")
+        .replaceAll("ns.serverExists (", "serverExists (")
+        .replaceAll("ns.serverExists(", "serverExists(")
+        .replaceAll("ns.setActionAutolevel (", "setActionAutolevel (")
+        .replaceAll("ns.setActionAutolevel(", "setActionAutolevel(")
+        .replaceAll("ns.setActionLevel (", "setActionLevel (")
+        .replaceAll("ns.setActionLevel(", "setActionLevel(")
+        .replaceAll("ns.setMemberTask (", "setMemberTask (")
+        .replaceAll("ns.setMemberTask(", "setMemberTask(")
+        .replaceAll("ns.setTeamSize (", "setTeamSize (")
+        .replaceAll("ns.setTeamSize(", "setTeamSize(")
+        .replaceAll("ns.setTerritoryWarfare (", "setTerritoryWarfare (")
+        .replaceAll("ns.setTerritoryWarfare(", "setTerritoryWarfare(")
+        .replaceAll("ns.setToCommitCrime (", "setToCommitCrime (")
+        .replaceAll("ns.setToCommitCrime(", "setToCommitCrime(")
+        .replaceAll("ns.setToCompanyWork (", "setToCompanyWork (")
+        .replaceAll("ns.setToCompanyWork(", "setToCompanyWork(")
+        .replaceAll("ns.setToFactionWork (", "setToFactionWork (")
+        .replaceAll("ns.setToFactionWork(", "setToFactionWork(")
+        .replaceAll("ns.setToGymWorkout (", "setToGymWorkout (")
+        .replaceAll("ns.setToGymWorkout(", "setToGymWorkout(")
+        .replaceAll("ns.setToShockRecovery (", "setToShockRecovery (")
+        .replaceAll("ns.setToShockRecovery(", "setToShockRecovery(")
+        .replaceAll("ns.setToSynchronize (", "setToSynchronize (")
+        .replaceAll("ns.setToSynchronize(", "setToSynchronize(")
+        .replaceAll("ns.setToUniversityCourse (", "setToUniversityCourse (")
+        .replaceAll("ns.setToUniversityCourse(", "setToUniversityCourse(")
+        .replaceAll("ns.short (", "short (")
+        .replaceAll("ns.short(", "short(")
+        .replaceAll("ns.sleep (", "sleep (")
+        .replaceAll("ns.sleep(", "sleep(")
+        .replaceAll("ns.spawn (", "spawn (")
+        .replaceAll("ns.spawn(", "spawn(")
+        .replaceAll("ns.spendHashes (", "spendHashes (")
+        .replaceAll("ns.spendHashes(", "spendHashes(")
+        .replaceAll("ns.sprintf (", "sprintf (")
+        .replaceAll("ns.sprintf(", "sprintf(")
+        .replaceAll("ns.sqlinject (", "sqlinject (")
+        .replaceAll("ns.sqlinject(", "sqlinject(")
+        .replaceAll("ns.startAction (", "startAction (")
+        .replaceAll("ns.startAction(", "startAction(")
+        .replaceAll("ns.stopBladeburnerAction (", "stopBladeburnerAction (")
+        .replaceAll("ns.stopBladeburnerAction(", "stopBladeburnerAction(")
+        .replaceAll("ns.switchCity (", "switchCity (")
+        .replaceAll("ns.switchCity(", "switchCity(")
+        .replaceAll("ns.tail (", "tail (")
+        .replaceAll("ns.tail(", "tail(")
+        .replaceAll("ns.tFormat (", "tFormat (")
+        .replaceAll("ns.tFormat(", "tFormat(")
+        .replaceAll("ns.toast (", "toast (")
+        .replaceAll("ns.toast(", "toast(")
+        .replaceAll("ns.tprint (", "tprint (")
+        .replaceAll("ns.tprint(", "tprint(")
+        .replaceAll("ns.tprintf (", "tprintf (")
+        .replaceAll("ns.tprintf(", "tprintf(")
+        .replaceAll("ns.travel (", "travel (")
+        .replaceAll("ns.travel(", "travel(")
+        .replaceAll("ns.tryWritePort (", "tryWritePort (")
+        .replaceAll("ns.tryWritePort(", "tryWritePort(")
+        .replaceAll("ns.unlockUpgrade (", "unlockUpgrade (")
+        .replaceAll("ns.unlockUpgrade(", "unlockUpgrade(")
+        .replaceAll("ns.upgradeCache (", "upgradeCache (")
+        .replaceAll("ns.upgradeCache(", "upgradeCache(")
+        .replaceAll("ns.upgradeCore (", "upgradeCore (")
+        .replaceAll("ns.upgradeCore(", "upgradeCore(")
+        .replaceAll("ns.upgradeLevel (", "upgradeLevel (")
+        .replaceAll("ns.upgradeLevel(", "upgradeLevel(")
+        .replaceAll("ns.upgradeRam (", "upgradeRam (")
+        .replaceAll("ns.upgradeRam(", "upgradeRam(")
+        .replaceAll("ns.upgradeSkill (", "upgradeSkill (")
+        .replaceAll("ns.upgradeSkill(", "upgradeSkill(")
+        .replaceAll("ns.vsprintf (", "vsprintf (")
+        .replaceAll("ns.vsprintf(", "vsprintf(")
+        .replaceAll("ns.wantedLevelGain (", "wantedLevelGain (")
+        .replaceAll("ns.wantedLevelGain(", "wantedLevelGain(")
+        .replaceAll("ns.wantedPenalty (", "wantedPenalty (")
+        .replaceAll("ns.wantedPenalty(", "wantedPenalty(")
+        .replaceAll("await ns.weaken (", "weaken (")
+        .replaceAll("await ns.weaken(", "weaken(")
+        .replaceAll("ns.weakenAnalyze (", "weakenAnalyze (")
+        .replaceAll("ns.weakenAnalyze(", "weakenAnalyze(")
+        .replaceAll("ns.weakenTime (", "weakenTime (")
+        .replaceAll("ns.weakenTime(", "weakenTime(")
+        .replaceAll("await ns.wget (", "wget (")
+        .replaceAll("await ns.wget(", "wget(")
+        .replaceAll("ns.width (", "width (")
+        .replaceAll("ns.width(", "width(")
+        .replaceAll("await ns.write (", "write (")
+        .replaceAll("await ns.write(", "write(")
+        .replaceAll("await ns.writePort (", "writePort (")
+        .replaceAll("await ns.writePort(", "writePort(")
+        };
+
+        function fixtext998() {
+        let textarea = document.getElementById("textarea3");
+        textarea.select();
+        fixTex998tarea(textarea);
+        }
+
+        window.addEventListener('DOMContentLoaded', function(e) {
+        var area = document.getElementById("textarea3");
+
+        var getCount = function(str, search) {
+            return str.split(search).length - 1;
+        };
+
+        var replace = function(search, replaceWith) {
+            if (typeof(search) == "object") {
+            area.value = area.value.replace(search, replaceWith);
+            return;
+            }
+            if (area.value.indexOf(search) >= 0) {
+            var start = area.selectionStart;
+            var end = area.selectionEnd;
+            var textBefore = area.value.substr(0, end);
+            var lengthDiff = (replaceWith.length - search.length) * getCount(textBefore, search);
+            area.value = area.value.replace(search, replaceWith);
+            area.selectionStart = start + lengthDiff;
+            area.selectionEnd = end + lengthDiff;
+            }
+        };
+        });
+    </script>
+
+	<script>
+		//Prevent links from being dragged
+		$('a').mousedown(function(e) {
+			e.preventDefault();
+		});
+	</script>
+
+    <script>
+        //Copy textarea
+        function copy1() {
+        let textarea = document.getElementById("textarea3");
+        textarea.select();
+        document.execCommand("copy");
+        }
+
+        //Clear textarea
+        function eraseText1() {
+            document.getElementById("textarea3").value = "";
+        }
+    </script>
+
+    <script>
+        var isChrome = !!window.chrome && !!window.chrome.webstore;
+        var mapObj = {
+            'main-ns': 'export async function main(ns) {\n\n}'
+ 
+        }
+        jQuery(".cbtn").on("click", function(event) {
+        var currButtonId = jQuery(event.target).attr('id');
+        var mappedText = mapObj[currButtonId];
+
+            jQuery("#textarea3").focus();
+            document.execCommand('insertText', false, mappedText);
+        });
+    </script>
+
+</body>
+
+</html>

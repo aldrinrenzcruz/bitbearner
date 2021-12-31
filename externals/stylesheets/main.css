@@ -1,0 +1,413 @@
+html { 
+	overflow-y: auto; 
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url("https://modernalexandria.netlify.app/Externals/imgs/background-img1.png");
+	background-repeat: repeat;
+}
+
+.pseudo-sticky {
+    position: fixed;
+    top: 0;
+	z-index: 10;
+}
+
+#toTopBtn {
+	position: fixed;
+	bottom: 20px;
+	right: 18px;
+	z-index: 10;
+	padding: 22px;
+	background-color: #1565c0;
+	border-radius: 5px;
+	opacity: .82;
+}
+
+.js .cd-top--fade-out { opacity: .5 }
+
+.js .cd-top--is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.js .cd-top {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s, visibility .3s, background-color .3s;
+}
+
+.cd-top {
+    position: fixed;
+    bottom: 20px;
+    bottom: var(--cd-back-to-top-margin);
+    right: 20px;
+    right: var(--cd-back-to-top-margin);
+    display: inline-block;
+    height: 40px;
+    height: var(--cd-back-to-top-size);
+    width: 40px;
+    width: var(--cd-back-to-top-size);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important;
+    background: url("https://modernalexandria.netlify.app/Externals/imgs/cd-top-arrow.svg") no-repeat center 50%;
+    background-color: #243b55;
+    background-color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.8);
+}
+
+img {
+	-webkit-user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.img-thumbnail { max-height: 180px; }
+
+.zoom { transition: transform .2s; }
+
+.zoom:hover {
+	-ms-transform: scale(1.04);
+	-webkit-transform: scale(1.04);
+	transform: scale(1.04);
+	-webkit-filter: brightness(107%);
+	filter: brightness(107%);
+}
+
+.book-header { transform: translateY(5rem); }
+
+.bg-custom33 {
+	background: url("https://modernalexandria.netlify.app/Externals/imgs/pastel-bg1.jpg") center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 200px;
+	box-shadow: 0 0 2px #999;
+}
+
+.white-space-books {
+	height: 25vh;
+}
+
+.bg-footercustom {
+	background-color: #654ea3;
+	background: -webkit-linear-gradient(to right, #654ea3, #eaafc8);
+	background: linear-gradient(to left, #141e30, #243b55);
+}
+
+.library-note {
+	font-size: 13px;
+	color: #333;
+}
+
+.books-height-container { min-height: 360px; }
+
+.offcanvas-title {
+	font-size: 27px;
+	text-decoration: none;
+	color: #111;
+}
+
+.offcanvas-title:hover { color: #111; }
+
+/* brightness and border effect on the random books logo/btn */
+.light-img {
+	border-radius: 30px;
+	border: 0.5px solid transparent;
+	cursor: pointer;
+}
+
+.light-img:hover {
+	-webkit-filter: brightness(105%);
+	filter: brightness(105%);
+	border: 0.5px solid #999;
+	background: #f7f7f7;
+	box-shadow: 0 0 2px #999;
+}
+
+.navbar-toggler { box-shadow: none !important; }
+
+.bi { vertical-align: 0.125em; }
+
+.menu-item { 
+	font-size: 22px;
+	text-decoration: none;
+}
+
+.menu-item:hover { 
+	color: #0087ca;
+}
+
+.link-item:hover {
+	color: #0087ca;
+}
+
+.no-underline { text-decoration: none; }
+
+/*Add to <a> tags only; blue underline animation for links*/
+.hover-underline-animation {
+	display: inline-block;
+	position: relative;
+}
+
+.hover-underline-animation:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #0087ca;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+	color: #243b55;
+}
+
+.hover-underline-animation:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+	color: #243b55;
+}
+
+/*Active page style; add individually as the SAME/CURRENT page;*/
+.active-hover-underline-animation {
+	display: inline-block;
+	color: #0087ca;
+	line-height: 28px;
+	border-bottom-width: 2.5px;
+	border-bottom-style: solid;
+}
+.active-hover-underline-animation:hover {
+	color: #0087ca;
+}
+
+/*Add to <a> tags only; add -black to get color: black for static text*/
+.black-hover-underline-animation {
+	display: inline-block;
+	position: relative;
+	color: #222;
+}
+
+.black-hover-underline-animation:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #0087ca;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+	color: #243b55;
+}
+
+.black-hover-underline-animation:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+	color: #243b55;
+}
+
+/*Add to <a> tags only; add -white to get color: white for static text*/
+.white-hover-underline-animation {
+	display: inline-block;
+	position: relative;
+	color: #fff;
+}
+
+.white-hover-underline-animation:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #0087ca;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+	color: #243b55;
+}
+
+.white-hover-underline-animation:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+	color: #243b55;
+}
+
+/*Image hover effect on books in the Feed page*/
+.image-light:hover {
+	-webkit-filter: brightness(105%);
+	filter: brightness(105%);
+}
+
+/*box shadow effect for cards in the Feed page*/
+.feed-card {
+	max-height: 80vh;
+	overflow-y: hidden;
+	transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+	cursor: context-menu;
+}
+
+.feed-card img { max-height: 290px; }
+
+.description-height {
+	max-height: 23vh;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+/*box shadow effect for cards in the Help page*/
+.help-card {
+	max-height: 80vh;
+	overflow-y: hidden;
+	transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+	cursor: context-menu;
+	border-radius: 12px !important;
+	height: 30vh;
+	font-family: 'Roboto', sans-serif;
+}
+
+.help-card:hover {
+	-webkit-filter: brightness(105%);
+	filter: brightness(105%);
+}
+
+.help-card a{
+	color: #333;
+	text-decoration: none;
+}
+
+.help-card a:hover{
+	color: #333;
+}
+
+.layered-waves{
+	background: url("https://modernalexandria.netlify.app/Externals/imgs/layered-waves.svg") no-repeat bottom;
+}
+
+.bug-report{
+	background: url("https://modernalexandria.netlify.app/Externals/imgs/bug-report.svg") no-repeat bottom;
+}
+
+.dm-us{
+	background: url("https://modernalexandria.netlify.app/Externals/imgs/dm-us.svg") no-repeat bottom;
+}
+
+.support-this-project{
+	background: url("https://modernalexandria.netlify.app/Externals/imgs/support-this-project.svg") no-repeat bottom;
+}
+
+.menu-offcanvas{
+	background-color: #111 !important;
+	max-width: 320px !important;
+	opacity: .9;
+}
+
+.random-book-modal {
+	background-color: #111 !important;
+	opacity: .95;
+}
+
+.get-a-copy-btn {
+	background-color: #1565c0;
+	text-align: center;
+	padding: 7px;
+	color: #fafafa;
+	text-decoration: none;
+	border: 1px solid #777;
+	border-radius: 4px;
+	transition: transform .1s;
+}
+
+.get-a-copy-btn:hover{
+	-webkit-filter: brightness(95%);
+	filter: brightness(95%);
+	color: #fafafa;
+}
+
+.get-a-copy-btn:active {
+	-ms-transform: scale(0.98);
+	-webkit-transform: scale(0.98);
+	transform: scale(0.98);
+	-webkit-filter: brightness(108%);
+	filter: brightness(108%);
+}
+
+.return-to-main-btn {
+	background-color: #eee;
+	text-align: center;
+	padding: 7px;
+	color: #222;
+	text-decoration: none;
+	border: 1px solid #777;
+	border-radius: 4px;
+	transition: transform .1s;
+}
+
+.return-to-main-btn:hover{
+	-webkit-filter: brightness(97%);
+	filter: brightness(97%);
+	color: #222;
+}
+
+.return-to-main-btn:active {
+	-ms-transform: scale(0.98);
+	-webkit-transform: scale(0.98);
+	transform: scale(0.98);
+	-webkit-filter: brightness(108%);
+	filter: brightness(108%);
+}
+
+.maybe-later-btn {
+	background-color: #eee;
+	text-align: center;
+	padding: 7px;
+	color: #222;
+	text-decoration: none;
+	border: 1px solid #777;
+	border-radius: 4px;
+	transition: transform .1s;
+}
+
+.maybe-later-btn:hover{
+	-webkit-filter: brightness(97%);
+	filter: brightness(97%);
+	color: #222;
+}
+
+.maybe-later-btn:active {
+	-ms-transform: scale(0.98);
+	-webkit-transform: scale(0.98);
+	transform: scale(0.98);
+	-webkit-filter: brightness(108%);
+	filter: brightness(108%);
+}
+
+.good-to-go-btn {
+	background-color: #1565c0;
+	text-align: center;
+	padding: 7px;
+	color: #fafafa;
+	text-decoration: none;
+	border: 1px solid #777;
+	border-radius: 4px;
+	transition: transform .1s;
+}
+
+.good-to-go-btn:hover {
+	-webkit-filter: brightness(108%);
+	filter: brightness(108%);
+	color: #fafafa;
+}
+
+.good-to-go-btn:active {
+	-ms-transform: scale(0.98);
+	-webkit-transform: scale(0.98);
+	transform: scale(0.98);
+	-webkit-filter: brightness(108%);
+	filter: brightness(108%);
+}
+
+div.sort-random { display: none; }
