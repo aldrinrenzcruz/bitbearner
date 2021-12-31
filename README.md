@@ -27,4 +27,5 @@ It can also be used when helping new players in the Discord channel or other for
 Feel free to use and reuse anything in this tool.
 
 # Mentions
-Special thanks to @lethern for providing the RegEx to handle the `export async main(ns)`, which is very important!
+Huge thanks to @lethern for providing all the RegEx needed to make the tool perform better!
+And special thanks to everyone in the Discord channel for providing advice and support, I have learned a lot!
