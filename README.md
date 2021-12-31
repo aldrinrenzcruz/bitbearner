@@ -10,6 +10,7 @@ export async function main(ns) {
 }
 ```
 If you want to convert `.script` to `.js` or `.ns`, simply click the button <b>Convert NS1 to NS2</b>.
+
 If it's the opposite, click the button <b>Convert NS1 to NS2</b>.
 
 This tool simply adds or deletes `ns.` in every Netscript functions, it also adds/deletes `await` for the functions it's needed. This is to say that the user will still have to manually remove instances of `export async function main(ns)`.
