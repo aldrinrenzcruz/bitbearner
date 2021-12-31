@@ -14,7 +14,7 @@ If it's the opposite, click the button <b>Convert NS1 to NS2</b>.
 
 This tool simply adds or deletes `ns.` in every Netscript functions, it also adds/deletes `await` for the functions it's needed. This is to say that the user will still have to manually remove instances of `export async function main(ns)`.
 
-I haven't fully explored the game, so feel free to correct any errors you find.
+I haven't fully explored the game, so I'd appreciate if you'd let me know about any errors you encounter.
 
 # About this tool
 I've created this converter mainly to practice coding, therefore it's in a <em>very simple</em> state right now.
