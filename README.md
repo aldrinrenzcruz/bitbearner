@@ -17,6 +17,6 @@ I've created this converter mainly to practice coding, therefore it's in a <em>v
 
 It's intended, mostly, for new players of <em>Bitburner</em> who, like me, used `ns1` when starting and now wants to switch to `ns2`.
 
-It can also be used when helping new players in the Discord channel or other forums in general. That way, its easier to convert the scripts they're sharing for testing purposes.
+It can also be used when helping new players in the Discord channel or other forums in general. That way, its faster to convert the scripts they're sharing for testing purposes.
 
 Feel free to use and reuse anything in this tool.
