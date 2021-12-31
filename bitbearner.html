@@ -219,7 +219,8 @@
         //NS1 to NS2 Converter
         function fixTex999tarea(textarea) {
         textarea.value = textarea.value.replace("", "")
-        .replace(/\bargs\b/, "ns.args")
+        .replaceAll("args [", "ns.args [")
+        .replaceAll("args[", "ns.args[")
         .replaceAll("activeFragments (", "ns.activeFragments (")
         .replaceAll("activeFragments(", "ns.activeFragments(")
         .replaceAll("alert (", "ns.alert (")
