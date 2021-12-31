@@ -760,9 +760,11 @@ export async function main(ns) {
         //NS2 to NS1 Converter
         function fixTex998tarea(textarea) {
         textarea.value = textarea.value.replace("", "")
-        .replace(/\/\*\*(.*)\@param \{NS\} ns(.*)\*\//, '')
-        .replace(/(^|\n)(\s*)export(\s+)async(\s+)function(\s+)main(.*){/, '')
-        .replace(/(?:.*)}(\s)*$/, '')
+        .replace(/\/\*\*(.*)\@param \{NS\} ns(.*)\*\//, '') //removes param comment
+        .replace(/(^|\n)(\s*)export(\s+)async(\s+)function(\s+)main(.*){/, '') //removes export async main
+        .replace(/(?:.*)}(\s)*$/, '') //removes the last bracket
+        .replace(/^\s*\n/, "") //removes the top empty line
+        .replace(/\s*$/, "") //removes the last empty line
         .replaceAll("ns.activeFragments (", "activeFragments (")
         .replaceAll("ns.activeFragments(", "activeFragments(")
         .replaceAll("ns.alert (", "alert (")
