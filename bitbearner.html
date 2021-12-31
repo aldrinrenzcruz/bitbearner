@@ -226,6 +226,8 @@ export async function main(ns) {
         //NS1 to NS2 Converter
         function fixTex999tarea(textarea) {
         textarea.value = textarea.value.replace("", "")
+        .replaceAll("args [", "ns.args [")
+        .replaceAll("args[", "ns.args[")
         .replaceAll("activeFragments (", "ns.activeFragments (")
         .replaceAll("activeFragments(", "ns.activeFragments(")
         .replaceAll("alert (", "ns.alert (")
@@ -765,6 +767,8 @@ export async function main(ns) {
         .replace(/(?:.*)}(\s)*$/, '') //removes the last bracket
         .replace(/^\s*\n/, "") //removes the top empty line
         .replace(/\s*$/, "") //removes the last empty line
+        .replaceAll("ns.args [", "args [")
+        .replaceAll("ns.args[", "args[")
         .replaceAll("ns.activeFragments (", "activeFragments (")
         .replaceAll("ns.activeFragments(", "activeFragments(")
         .replaceAll("ns.alert (", "alert (")
