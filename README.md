@@ -1,6 +1,8 @@
 # Bitbearner
  A converter tool for the game, [Bitburner](https://danielyxie.github.io/bitburner/) - converts scripts from NS1 to NS2 or vice versa.
 
+No more manual addition/deletion of `ns.` and `await`!
+
  # How to use
 First, head over to https://bitbearner.netlify.app/bitbearner
 
@@ -17,7 +19,7 @@ This tool simply add/delete `ns.` in every Netscript functions, it also add/dele
 # About this tool
 It's intended, mostly, for new players of <em>Bitburner</em> who, like me, used `ns1` when starting and now wants to switch to `ns2`.
 
-It can also be used when helping new players who uses `ns1` in the [Discord channel](https://discord.gg/TFc3hKD) or other forums in general. That way, its faster to convert the scripts they're sharing for testing purposes.
+It can also be used when helping new players who are using `ns1`.
 
 Feel free to use and reuse anything in this tool.
 
