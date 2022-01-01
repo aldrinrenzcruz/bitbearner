@@ -173,15 +173,21 @@
                     </nav>
                     <form class="mx-3 mt-3" name="editorial">
                         <textarea class="form-control styledTextarea mt-1" id="textarea3" spellcheck="false" rows="20" 
-placeholder="Paste some code..
+placeholder='Paste some code..
 
-NOTE WHEN CONVERTING NS1 TO NS2:
-If the script you're pasting is not pure NS1,
-meaning it has been manually changed to NS2 half-way,
-please convert it first below using NS2 to NS1 to delete the changes.
-This will ensure there's no duplicates in the result.
+var pureNS1 = "unchanged; no NS2 parts added manually";
+var yourScript = "the script you want to convert";
 
-This is a workaround until a proper solution is available."></textarea>
+while (!fileExists("properSolution.js") {
+    if (yourScript == pureNS1) {
+        clickButtonBelow("Convert NS1 to NS2");
+    }
+    else {
+        clickButtonBelow("Covert NS2 to NS1"); //Prevents duplicates
+        clickButtonBelow("Convert NS1 to NS2");
+    }
+    sleep(2022);
+}''></textarea>
                     </form>
 
                     <div class="text-center my-3">
