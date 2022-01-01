@@ -12,7 +12,7 @@ If you want to convert a `.script` to `.js` or `.ns`, simply click the <b>Conver
 
 If it's the other way around, click the <b>Convert NS1 to NS2</b> button.
 
-This tool simply adds or deletes `ns.` in every Netscript functions, it also adds/deletes `await` for the functions it's needed. Furthermore, it will automatically wrap the whole code inside the `main function`.
+This tool simply add/delete `ns.` in every Netscript functions, it also add/delete `await` if necessary. Furthermore, it will automatically wrap the whole code inside the `main function`.
 
 # About this tool
 It's intended, mostly, for new players of <em>Bitburner</em> who, like me, used `ns1` when starting and now wants to switch to `ns2`.
