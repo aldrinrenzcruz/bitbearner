@@ -11,154 +11,13 @@
 	<title>Bitbearner</title>
 
 	<link rel="shortcut icon" type="image/png" href="externals/imgs/apple-icon-57x57.png">
-
 	<link rel="stylesheet" href="externals/stylesheets/bootstrap.min.css">
-
+	<link rel="stylesheet" href="externals/stylesheets/main.min.css">
 	<script src="externals/scripts/2.2.4.jquery.min.js"></script>
-
 	<link rel="stylesheet" href="externals/icons/bootstrap/bootstrap-icons.css"/>
 
 	<style>
-        html { 
-            overflow-y: auto; 
-            box-sizing: border-box;
-        }
 
-        body {
-            background-image: url("https://bitbearner.netlify.app/Externals/imgs/background-img1.png");
-            background-repeat: repeat;
-        }
-        .navbar {
-            background-color: #004d40;
-            border-radius: 0.250rem 0.250rem 0 0;
-            max-height: 45px;
-            border-top: 1px solid #424242 !important;
-            border-left: 1px solid #424242 !important;
-            border-right: 1px solid #424242 !important;
-            font-family: Courier;
-        }
-        .main-card {
-            background-color: #0c0d0e;
-        }
-
-        textarea {
-            background-color: #333 !important;
-			outline: none;
-			box-shadow:none !important;
-			border:1px solid #555 !important;
-			font-family: Courier;
-			color: #f0f0f0 !important;
-            font-size: 18px !important;
-            resize: both;
-            max-width: 100%;
-            height: 65vh;
-		}
-        .convert-button {
-            border: 1px solid;
-            border-color: #555;
-            border-radius: 3px;
-            padding: 10px 10px;
-            font-size: 15px;
-            text-align: center;
-            cursor: pointer;
-            color: #000;
-            background-color: #e0f2f1;
-            font-weight: bold;
-            margin-bottom: 10px;
-            font-family: Courier;
-        }
-        .convert-button:hover {
-            -webkit-filter: brightness(103%);
-            filter: brightness(103%);
-        }
-        .convert-button:active {
-            background-color: #e0f7fa;
-            transform: translateY(1px);
-            outline: none;
-            box-shadow: 1px #666;
-        }
-        .insert-button {
-            border: 1px solid;
-            border-color: #555;
-            border-radius: 3px;
-            padding: 10px 10px;
-            font-size: 15px;
-            text-align: center;
-            cursor: pointer;
-            color: #000;
-            background-color: #86c5f9;
-            font-weight: bold;
-            margin-bottom: 10px;
-            font-family: Courier;
-        }
-        .insert-button:hover {
-            -webkit-filter: brightness(103%);
-            filter: brightness(103%);
-        }
-        .insert-button:active {
-            background-color: #85d5fa;
-            transform: translateY(1px);
-            outline: none;
-            box-shadow: 1px #666;
-        }
-        .copy-button {
-            border: 1px solid;
-            border-color: #555;
-            border-radius: 3px;
-            padding: 10px 10px;
-            font-size: 15px;
-            text-align: center;
-            cursor: pointer;
-            color: #000;
-            background-color: #81c784;
-            font-weight: bold;
-            margin-bottom: 10px;
-            font-family: Courier;
-        }
-        .copy-button:hover {
-            -webkit-filter: brightness(103%);
-            filter: brightness(103%);
-        }
-        .copy-button:active {
-            background-color: #81c784;
-            transform: translateY(1px);
-            outline: none;
-            box-shadow: 1px #666;
-        }
-        .delete-button {
-            border: 1px solid;
-            border-color: #555;
-            border-radius: 3px;
-            padding: 10px 10px;
-            font-size: 15px;
-            text-align: center;
-            cursor: pointer;
-            color: #000;
-            background-color: #e57373;
-            font-weight: bold;
-            margin-bottom: 10px;
-            font-family: Courier;
-        }
-        .delete-button:hover {
-            -webkit-filter: brightness(105%);
-	        filter: brightness(105%);
-        }
-        .delete-button:active {
-            background-color: #e77e7e;
-            transform: translateY(1px);
-            outline: none;
-            box-shadow: 1px #666;
-        }
-        .footertext-1 {
-            color: #616161;
-            font-family: Courier;
-        }
-        a:hover { 
-            color: #21A821;
-        }
-        ::placeholder {
-            color: #21A821 !important;
-        }
 	</style>
 
 </head>
@@ -176,23 +35,7 @@
                         <span class="navbar-brand text-white mb-0 h1 ms-3">🐻 Bitbearner</span>
                     </nav>
                     <form class="mx-3 mt-3" name="editorial">
-                        <textarea class="form-control styledTextarea mt-1" id="textarea3" spellcheck="false" 
-placeholder='//Paste some code here...
-
-//Please read note:
-var pureNS1 = "unchanged, no NS2 parts added manually";
-var yourScript = "the script you want to convert";
-
-while (!fileExists("properSolution.js") {
-    if (yourScript == pureNS1) {
-        clickButtonBelow("Convert NS1 to NS2");
-    }
-    else {
-        clickButtonBelow("Covert NS2 to NS1"); //Prevents duplicates
-        clickButtonBelow("Convert NS1 to NS2");
-    }
-    sleep(2022);
-}''></textarea>
+                        <textarea class="form-control mt-1" id="textarea3" spellcheck="false" placeholder='//Paste some code here...'></textarea>
                     </form>
 
                     <div class="text-center my-3">
@@ -204,8 +47,9 @@ while (!fileExists("properSolution.js") {
                     </div>
 
                     <p class="ms-3 mt-5 mb-0 footertext-1">Bitbearner v0.0.2 </p>
+                    <p class="ms-3 mb-0"><a class="footertext-1" data-bs-toggle="modal" data-bs-target="#read-note-modal">Read this note</a></p>
                     <p class="ms-3 mb-0"><a class="footertext-1" href="https://github.com/ixwrites/bitbearner">Github</a></p>
-                    <p class="ms-3 mb-5"><a class="footertext-1" href="https://danielyxie.github.io/bitburner/">Play the game</a></p>                    
+                    <p class="ms-3 mb-5"><a class="footertext-1" href="https://danielyxie.github.io/bitburner/">Play the game</a></p>
 				</div>
 
 			</div>
@@ -214,8 +58,19 @@ while (!fileExists("properSolution.js") {
 
 	</div>
 
-	<script src="../../../externals/scripts/popper.min.js"></script>
-	<script src="../../../externals/scripts/bootstrap.min.js"></script>
+    <div class="modal fade" id="read-note-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+                <p class="modal-title" id="exampleModalLabel">temporary-workaround.script</p>
+                <img class="img-fluid" src="temporary-workaround.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+	<script src="externals/scripts/popper.min.js"></script>
+	<script src="externals/scripts/bootstrap.min.js"></script>
 
     <script>
         function convertNS1(){
@@ -1336,7 +1191,7 @@ while (!fileExists("properSolution.js") {
         var isChrome = !!window.chrome && !!window.chrome.webstore;
         var mapObj = {
             'main-ns': 'export async function main(ns) {\n\n}'
- 
+
         }
         jQuery(".cbtn").on("click", function(event) {
         var currButtonId = jQuery(event.target).attr('id');
