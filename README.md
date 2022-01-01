@@ -1,5 +1,5 @@
 # Bitbearner
- A converter tool for the game [Bitrunner](https://danielyxie.github.io/bitburner/) - converts scripts from NS1 to NS2.
+ A converter tool for the game [Bitburner](https://danielyxie.github.io/bitburner/) - converts scripts from NS1 to NS2.
 
  # How to use
 First, head over to https://bitbearner.netlify.app/bitbearner
@@ -34,4 +34,4 @@ If you're interested to learn more about Netscript, check out the ff:
 
 # Mentions
 Huge thanks to @lethern for providing all the RegEx needed to make the tool perform much better!
-And special thanks to everyone in the Discord channel for providing advice and support, I have learned a lot!
+And special thanks to everyone in the [Discord channel](https://discord.gg/TFc3hKD) for providing advice and support, I have learned a lot!
