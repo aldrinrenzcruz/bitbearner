@@ -13,11 +13,9 @@ Then, paste your script in the textarea:
 ```js
 //Your code goes here
 ```
-If you want to convert a `.script` to `.js` or `.ns`, simply click the <b>Convert NS1 to NS2</b> button.
+If you want to convert a `.script` to `.js` or `.ns`, simply click the <b>Convert NS1 to NS2</b> button. If it's the other way around, click the <b>Convert NS1 to NS2</b> button.
 
-If it's the other way around, click the <b>Convert NS1 to NS2</b> button.
-
-This tool simply add/delete `ns.` in every Netscript functions, it also add/delete `await` if necessary. Furthermore, it will automatically wrap the whole code inside the `main function`.
+How this tool works is by simply adding/deling `ns.` in every Netscript functions. It also add/delete `await` if necessary. Lastly, it will automatically wrap the whole script inside the `main function`.
 
 Feel free to use and reuse anything in this tool.
 
