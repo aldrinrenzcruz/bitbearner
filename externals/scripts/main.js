@@ -3,7 +3,7 @@ function convertNS1(){
     document.getElementById("ns1-to-ns2").disabled = true;
     setTimeout(function() {
         document.getElementById("ns1-to-ns2").disabled = false;
-    }, 2000);
+    }, 1500);
 }
 document.getElementById("ns1-to-ns2").addEventListener("click", convertNS1);
 
@@ -12,7 +12,7 @@ function convertNS2(){
     document.getElementById("ns2-to-ns1").disabled = true;
     setTimeout(function() {
         document.getElementById("ns2-to-ns1").disabled = false;
-    }, 2000);
+    }, 1500);
 }
 document.getElementById("ns2-to-ns1").addEventListener("click", convertNS2);
 

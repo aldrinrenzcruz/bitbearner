@@ -1,6 +1,6 @@
 //NS1 to NS2 Converter
 function fixTex999tarea(textarea) {
-textarea.value = textarea.value.replace("", "")
+textarea.value = textarea.value
 .replaceAll("args [", "ns.args [")
 .replaceAll("args[", "ns.args[")
 .replaceAll("activeFragments (", "ns.activeFragments (")
@@ -523,7 +523,11 @@ textarea.value = textarea.value.replace("", "")
 .replaceAll("write(", "await ns.write(")
 .replaceAll("writePort (", "await ns.writePort (")
 .replaceAll("writePort(", "await ns.writePort(")
-textarea.value  = '/** @param {NS} ns **/\nexport async function main(ns) {\n' + textarea.value  + '\n}'
+
+if (!textarea.value.includes("@param")) {
+    textarea.value  = '/** @param {NS} ns **/\nexport async function main(ns) {\n' + textarea.value  + '\n}'
+}
+
 };
 
 function fixtext999() {

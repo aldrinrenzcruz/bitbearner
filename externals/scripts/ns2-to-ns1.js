@@ -1,8 +1,6 @@
 //NS2 to NS1 Converter
 function fixTex998tarea(textarea) {
 textarea.value = textarea.value
-.replace(/^\s*\n/, "") //removes the top empty line
-.replace(/\s*$/, "") //removes the last empty line
 .replaceAll("ns.args [", "args [")
 .replaceAll("ns.args[", "args[")
 .replaceAll("ns.activeFragments (", "activeFragments (")
@@ -544,16 +542,17 @@ textarea.value = textarea.value
 .replaceAll("ns.writePort (", "writePort (")
 .replaceAll("ns.writePort(", "writePort(")
 
-if (textarea.value.includes("main(")) {
+//If textarea includes "main(ns)", do process
+if (textarea.value.includes("main (ns)") || textarea.value.includes("main(ns)")) {
     textarea.value = textarea.value.replace(/(?:.*)}(\s)*$/, '')
 }
 
 textarea.value = textarea.value
 .replace(/\/\*\*(.*)\@param \{NS\} ns(.*)\*\//, '') //removes param comment
 .replace(/(^|\n)(\s*)export(\s+)async(\s+)function(\s+)main(.*){/, '') //removes export async main
+.replace(/^\s*\n/, "") //removes the top empty line
+.replace(/\s*$/, "") //removes the last empty line
 };
-
-
 
 function fixtext998() {
 let textarea = document.getElementById("textarea3");
