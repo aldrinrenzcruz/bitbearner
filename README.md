@@ -24,7 +24,7 @@ The tool currently can only wrap a whole chunk of script with a single `export a
 
 ## Resources
 If you're interested to learn more about Netscript, check out the ff:
-- [Basic Bitburner documentation](https://bitburner.readthedocs.io/en/latest/)
+- [Bitburner's documentation](https://bitburner.readthedocs.io/en/latest/)
 - [All NS functions](https://github.com/danielyxie/bitburner/blob/dev/markdown/bitburner.ns.md)
 - [Ralic's NS1-to-NS2 Guide](https://github.com/xRalic/NS1-to-NS2-Guide)
 
