@@ -2,22 +2,35 @@ html {
     overflow-y: auto; 
     box-sizing: border-box;
 }
+::-webkit-scrollbar {
+	width: .8rem;
+	height: 0rem;
+}
+::-webkit-scrollbar-thumb { background: #333; }
+
+::-webkit-scrollbar-thumb:hover { background: #b0bec5; }
+
+::-webkit-scrollbar-track { background: #555; }
 
 body {
     background-image: url("https://bitbearner.netlify.app/Externals/imgs/background-img1.png");
     background-repeat: repeat;
 }
 .navbar {
-    background-color: #004d40;
+    background-color: #121415;
     border-radius: 0.250rem 0.250rem 0 0;
     max-height: 45px;
-    border-top: 1px solid #424242 !important;
-    border-left: 1px solid #424242 !important;
-    border-right: 1px solid #424242 !important;
+    border-top: 1px solid #333 !important;
+    border-left: 1px solid #333 !important;
+    border-right: 1px solid #333 !important;
     font-family: Courier;
 }
 .main-card {
     background-color: #0c0d0e;
+    border-left: 1px solid #333 !important;
+    border-right: 1px solid #333 !important;
+    border-bottom: 1px solid #333 !important;
+    
 }
 a {
     cursor: pointer;
