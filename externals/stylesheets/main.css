@@ -29,6 +29,13 @@ img {
     -webkit-user-select: none;
     -ms-user-select: none;
 }
+.donothighlight {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
 textarea {
     background-color: #121415 !important;
     outline: none;
