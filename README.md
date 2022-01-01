@@ -1,7 +1,7 @@
 # Bitbearner
  A converter tool for the game, [Bitburner](https://danielyxie.github.io/bitburner/) - converts scripts from NS1 to NS2 or vice versa.
 
-No tiresome more manual addition/deletion of `ns.` and `await`!
+No more tiresome manual addition/deletion of `ns.` and `await`!
 
 - Bitbearner is intended, mostly, for new players of <em>Bitburner</em> who, like me, used `ns1` when starting and now wants to switch to `ns2`.
 - It can also be used when helping new players who are using `ns1`.
