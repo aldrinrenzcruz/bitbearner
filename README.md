@@ -20,7 +20,8 @@ How this tool works is by simply adding/deling `ns.` in every Netscript function
 Feel free to use and reuse anything in this tool.
 
 ## Limitations
-The tool currently can only wrap a whole chunk of script with a single `export async main function`; It can't wrap (or unwrap) each `async functions` in the middle (if there is), so that will have to be done manually.
+- The tool currently can only wrap a whole chunk of script with a single `export async main function`; It can't wrap (or unwrap) each `async functions` in the middle (if there is), so that will have to be done manually.
+- For `args`, only `args[]` will be converted to `ns.args`; args in a function like `(args)`, will have to be manually updated. This is because it's difficult to predict how users will use `args`.
 
 ## Resources
 If you're interested to learn more about Netscript, check out the ff:
