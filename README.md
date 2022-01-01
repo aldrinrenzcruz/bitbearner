@@ -20,7 +20,7 @@ How this tool works is by simply adding/deling `ns.` in every Netscript function
 Feel free to use and reuse anything in this tool.
 
 ## Limitations
-The tool currently can only wrap a whole chunk of script with a single `main function`; It can't wrap (or unwrap) each `async functions` so that will have to be done manually.
+The tool currently can only wrap a whole chunk of script with a single `export async main function`; It can't wrap (or unwrap) each `async functions` so that will have to be done manually.
 
 ## Resources
 If you're interested to learn more about Netscript, check out the ff:
