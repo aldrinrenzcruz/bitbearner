@@ -1,5 +1,5 @@
 # Bitbearner
- A converter tool for the game [Bitburner](https://danielyxie.github.io/bitburner/) - converts scripts from NS1 to NS2.
+ A converter tool for the game, [Bitburner](https://danielyxie.github.io/bitburner/) - converts scripts from NS1 to NS2 or vice versa.
 
  # How to use
 First, head over to https://bitbearner.netlify.app/bitbearner
