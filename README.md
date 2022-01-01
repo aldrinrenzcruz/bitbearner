@@ -26,7 +26,7 @@ Feel free to use and reuse anything in this tool.
 ## Resources
 If you're interested to learn more about Netscript, check out the ff:
 - [Bitburner's documentation](https://bitburner.readthedocs.io/en/latest/)
-- [All NS functions](https://github.com/danielyxie/bitburner/blob/dev/markdown/bitburner.ns.md)
+- [List of Netscript functions](https://github.com/danielyxie/bitburner/blob/dev/markdown/bitburner.ns.md)
 - [Ralic's NS1-to-NS2 Guide](https://github.com/xRalic/NS1-to-NS2-Guide)
 
 ## Mentions
