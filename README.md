@@ -3,6 +3,9 @@
 
 No more manual addition/deletion of `ns.` and `await`!
 
+- Bitbearner is intended, mostly, for new players of <em>Bitburner</em> who, like me, used `ns1` when starting and now wants to switch to `ns2`.
+- It can also be used when helping new players who are using `ns1`.
+
 ## How to use
 First, head over to https://bitbearner.netlify.app/bitbearner
 
@@ -15,11 +18,6 @@ If you want to convert a `.script` to `.js` or `.ns`, simply click the <b>Conver
 If it's the other way around, click the <b>Convert NS1 to NS2</b> button.
 
 This tool simply add/delete `ns.` in every Netscript functions, it also add/delete `await` if necessary. Furthermore, it will automatically wrap the whole code inside the `main function`.
-
-## About this tool
-It's intended, mostly, for new players of <em>Bitburner</em> who, like me, used `ns1` when starting and now wants to switch to `ns2`.
-
-It can also be used when helping new players who are using `ns1`.
 
 Feel free to use and reuse anything in this tool.
 
