@@ -19,10 +19,13 @@ How this tool works is by simply adding/deling `ns.` in every Netscript function
 
 Feel free to use and reuse anything in this tool.
 
+## Limitations
+The tool currently can only wrap a whole chunk of script with a single `main function`; It can't wrap (or unwrap) each `async functions` so that will have to be done manually.
+
 ## Resources
 If you're interested to learn more about Netscript, check out the ff:
-- Basic Bitburner documentation(https://bitburner.readthedocs.io/en/latest/)
-- All NS functions(https://github.com/danielyxie/bitburner/blob/dev/markdown/bitburner.ns.md)
+- [Basic Bitburner documentation](https://bitburner.readthedocs.io/en/latest/)
+- [All NS functions](https://github.com/danielyxie/bitburner/blob/dev/markdown/bitburner.ns.md)
 - [Ralic's NS1-to-NS2 Guide](https://github.com/xRalic/NS1-to-NS2-Guide)
 
 ## Mentions
