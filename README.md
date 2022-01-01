@@ -3,7 +3,8 @@
 
  # How to use
 First, head over to https://bitbearner.netlify.app/bitbearner
-Paste your script in the textarea:
+
+Then, paste your script in the textarea:
 ```js
 //Your code goes here
 ```
