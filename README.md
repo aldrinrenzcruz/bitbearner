@@ -3,11 +3,9 @@
 
  # How to use
 First, head over to https://bitbearner.netlify.app/bitbearner
-Paste your script inside the <b>main(ns)</b> function:
+Paste your script in the textarea:
 ```js
-export async function main(ns) {
 //Your code goes here
-}
 ```
 If you want to convert a `.script` to `.js` or `.ns`, simply click the <b>Convert NS1 to NS2</b> button.
 
