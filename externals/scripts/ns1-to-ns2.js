@@ -523,6 +523,13 @@ textarea.value = textarea.value
 .replaceAll("write(", "await ns.write(")
 .replaceAll("writePort (", "await ns.writePort (")
 .replaceAll("writePort(", "await ns.writePort(")
+.replaceAll("ns.ns.ns.ns.", "ns.")
+.replaceAll("ns.ns.ns.", "ns.")
+.replaceAll("ns.ns.", "ns.")
+.replaceAll("ns. ", "ns.")
+.replaceAll("ns.await", "ns.")
+.replaceAll("await await", "await")
+.replaceAll("await ns.ns.", "await")
 
 
 

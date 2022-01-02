@@ -552,6 +552,10 @@ textarea.value = textarea.value
 .replace(/(^|\n)(\s*)export(\s+)async(\s+)function(\s+)main(.*){/, '') //removes export async main
 .replace(/^\s*\n/, "") //removes the top empty line
 .replace(/\s*$/, "") //removes the last empty line
+.replaceAll("ns.ns.ns.ns.", "ns.")
+.replaceAll("ns.ns.ns.", "ns.")
+.replaceAll("ns.ns.", "ns.")
+.replaceAll("ns. ", "ns.")
 };
 
 function fixtext998() {
