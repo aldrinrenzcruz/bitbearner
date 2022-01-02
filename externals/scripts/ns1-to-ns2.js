@@ -524,17 +524,20 @@ textarea.value = textarea.value
 .replaceAll("writePort (", "await ns.writePort (")
 .replaceAll("writePort(", "await ns.writePort(")
 
-// if (textarea.value.includes("main (ns)") || textarea.value.includes("main(ns)")) {
+
+
+// // If textarea has no "main(ns)" yet, add one
+// if (!textarea.value.includes("main(ns)") && !textarea.value.includes("main (ns)")) {
 //     textarea.value  = 'export async function main(ns) {\n' + textarea.value  + '\n}'
 // }
 
-// If textarea has no "main(ns)" yet, add one
-if (!textarea.value.includes("main(ns)") || !textarea.value.includes("main(ns)")) {
-    textarea.value  = 'export async function main(ns) {\n' + textarea.value  + '\n}'
+// If textarea has no "@param" and "main(ns)" yet, add each etc.
+if (!textarea.value.includes("@param {NS}") && !textarea.value.includes("main (ns)") && !textarea.value.includes("main(ns)")) {
+    textarea.value  = '/** @param {NS} ns **/\nexport async function main(ns) {\n' + textarea.value  + '\n}'
 }
 
-// If textarea has no "@param" yet, add one
-if (!textarea.value.includes("@param {NS}")) {
+// If textarea already has a "main(ns)", add only the "@param"
+if (!textarea.value.includes("@param {NS}") && (textarea.value.includes("main (ns)") || textarea.value.includes("main(ns)"))) {
     textarea.value  = '/** @param {NS} ns **/\n' + textarea.value
 }
 
