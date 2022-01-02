@@ -37,9 +37,9 @@ I'm a beginner who's just trying to practice. If you have any suggestions or ide
 
 ## Resources
 If you're interested to learn more about Netscript, check out the ff:
+- [Ralic's NS1-to-NS2 Guide](https://github.com/xRalic/NS1-to-NS2-Guide)
 - [Bitburner's documentation](https://bitburner.readthedocs.io/en/latest/)
 - [List of Netscript functions](https://github.com/danielyxie/bitburner/blob/dev/markdown/bitburner.ns.md)
-- [Ralic's NS1-to-NS2 Guide](https://github.com/xRalic/NS1-to-NS2-Guide)
 
 ## Mentions
 Huge thanks to @lethern for providing all the RegEx needed to make the tool perform much better!
