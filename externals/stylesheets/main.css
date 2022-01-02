@@ -6,11 +6,11 @@ html {
 	width: .8rem;
 	height: 0rem;
 }
-::-webkit-scrollbar-thumb { background: #333; }
+::-webkit-scrollbar-thumb { background: #333; cursor: pointer; }
 
-::-webkit-scrollbar-thumb:hover { background: #b0bec5; }
+::-webkit-scrollbar-thumb:hover { background: #444; cursor: pointer;}
 
-::-webkit-scrollbar-track { background: #555; }
+::-webkit-scrollbar-track { background: #555; cursor: pointer; }
 
 body {
     background-image: url("https://bitbearner.netlify.app/Externals/imgs/background-img1.png");

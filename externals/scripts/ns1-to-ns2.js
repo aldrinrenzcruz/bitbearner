@@ -523,15 +523,16 @@ function fixTex999tarea(textarea) {
         .replaceAll("write(", "await ns.write(")
         .replaceAll("writePort (", "await ns.writePort (")
         .replaceAll("writePort(", "await ns.writePort(")
+        .replaceAll("await await", "await")
+        .replaceAll("await ns.ns.", "await")
+        .replaceAll("ns.await", "ns.")
+        .replaceAll("ns. ", "ns.")
         .replaceAll("ns.ns.ns.ns.", "ns.")
         .replaceAll("ns.ns.ns.", "ns.")
         .replaceAll("ns.ns.", "ns.")
-        .replaceAll("ns. ", "ns.")
-        .replaceAll("ns.await", "ns.")
-        .replaceAll("await await", "await")
-        .replaceAll("await ns.ns.", "await")
+        .replaceAll("ns. ns.", "ns.")
 
-    // If textarea has no "main(ns)" yet, add one
+    // //If textarea has no "main(ns)" yet, add one
     // if (!textarea.value.includes("main(ns)") && !textarea.value.includes("main (ns)")) {
     //     textarea.value  = 'export async function main(ns) {\n' + textarea.value  + '\n}'
     // }
