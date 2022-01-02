@@ -22,18 +22,17 @@ Feel free to use and reuse anything in this tool.
 ## Limitations & stuff to improve
 
 These will have to be changed manually:
-- addition/deletion of `args` in a function like `(args)
+- addition/deletion of `args` in a function like `(args)`
 - deletion of `import` and `export` when converting NS2 to NS1
 - wrapping of additional `async functions`
 
 Note that only the first and main `export async function main(ns)` will be handled in the conversion.
 
 TODO:
-- Tweak the script to prevent duplicate conversions when clicking the same convert buttons multiple times.
 - Add a text that shows whether the script in the textarea is `.script` or `.js` and probably do something about it
 - Add a syntax-highlighter
 
-I'm a beginner who's just trying to practice. If you have any suggestions or ideas on how to improve this, you can let me know or send a PR.
+If you have found bugs/ have suggestions or ideas, feel free to let me know or send a PR.
 
 ## Resources
 If you're interested to learn more about Netscript, check out the ff:
@@ -41,6 +40,6 @@ If you're interested to learn more about Netscript, check out the ff:
 - [Bitburner's documentation](https://bitburner.readthedocs.io/en/latest/)
 - [List of Netscript functions](https://github.com/danielyxie/bitburner/blob/dev/markdown/bitburner.ns.md)
 
-## Mentions
+## Special thanks
 Huge thanks to @lethern for providing all the RegEx needed to make the tool perform much better!
 And special thanks to everyone in the [Discord channel](https://discord.gg/TFc3hKD) for providing advice and support, I keep learning new things from y'all!
