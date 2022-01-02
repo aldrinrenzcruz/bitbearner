@@ -383,8 +383,8 @@ textarea.value = textarea.value
 .replaceAll("place(", "ns.place(")
 .replaceAll("placeOrder (", "ns.placeOrder (")
 .replaceAll("placeOrder(", "ns.placeOrder(")
-.replaceAll("print (", "ns.print (")
-.replaceAll("print(", "ns.print(")
+.replace(/\bprint\s*\(/g, "ns.print (")
+.replace(/\bprint*\(/g, "ns.print(")
 .replaceAll("prompt (", "await ns.prompt (")
 .replaceAll("prompt(", "await ns.prompt(")
 .replaceAll("ps (", "ns.ps (")
@@ -524,8 +524,18 @@ textarea.value = textarea.value
 .replaceAll("writePort (", "await ns.writePort (")
 .replaceAll("writePort(", "await ns.writePort(")
 
-if (!textarea.value.includes("@param")) {
-    textarea.value  = '/** @param {NS} ns **/\nexport async function main(ns) {\n' + textarea.value  + '\n}'
+// if (textarea.value.includes("main (ns)") || textarea.value.includes("main(ns)")) {
+//     textarea.value  = 'export async function main(ns) {\n' + textarea.value  + '\n}'
+// }
+
+// If textarea has no "main(ns)" yet, add one
+if (!textarea.value.includes("main(ns)") || !textarea.value.includes("main(ns)")) {
+    textarea.value  = 'export async function main(ns) {\n' + textarea.value  + '\n}'
+}
+
+// If textarea has no "@param" yet, add one
+if (!textarea.value.includes("@param {NS}")) {
+    textarea.value  = '/** @param {NS} ns **/\n' + textarea.value
 }
 
 };

@@ -542,7 +542,7 @@ textarea.value = textarea.value
 .replaceAll("ns.writePort (", "writePort (")
 .replaceAll("ns.writePort(", "writePort(")
 
-//If textarea includes "main(ns)", do process
+//If textarea has "main(ns)", remove its last bracket pair
 if (textarea.value.includes("main (ns)") || textarea.value.includes("main(ns)")) {
     textarea.value = textarea.value.replace(/(?:.*)}(\s)*$/, '')
 }
