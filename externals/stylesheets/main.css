@@ -13,7 +13,7 @@ html {
 ::-webkit-scrollbar-track { background: #555; cursor: pointer; }
 
 body {
-    background-image: url("https://bitbearner.netlify.app/Externals/imgs/background-img1.png");
+    background-image: url("https://bitbearner.netlify.app/externals/imgs/background-img1.png");
     background-repeat: repeat;
 }
 .navbar {
