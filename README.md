@@ -20,11 +20,20 @@ How this tool works is by simply adding/deling `ns.` in every Netscript function
 Feel free to use and reuse anything in this tool.
 
 ## Limitations & stuff to improve
-- The tool currently can only wrap a whole chunk of script with a single `export async main function`; It can't wrap (or unwrap) each `async functions` in the middle (if there is), so that will have to be done manually.
-- For `args`, only `args[]` will be converted to `ns.args`; args in a function like `(args)`, will have to be manually updated. This is because it's difficult to predict how users will use `args`.
-- Tweak the script to prevent duplicate conversions.
+
+These will have to be changed manually:
+- addition/deletion of `args` in a function like `(args)
+- deletion of `import` and `export` when converting NS2 to NS1
+- wrapping of additional `async functions`
+
+Note that only the first and main `export async function main(ns)` will be handled in the conversion.
+
+TODO:
+- Tweak the script to prevent duplicate conversions when clicking the same convert buttons multiple times.
 - Add a text that shows whether the script in the textarea is `.script` or `.js` and probably do something about it
-- Install a syntax-highlighter
+- Add a syntax-highlighter
+
+I'm a beginner who's just trying to practice. If you have any suggestions or ideas on how to improve this, you can let me know or send a PR.
 
 ## Resources
 If you're interested to learn more about Netscript, check out the ff:
@@ -34,4 +43,4 @@ If you're interested to learn more about Netscript, check out the ff:
 
 ## Mentions
 Huge thanks to @lethern for providing all the RegEx needed to make the tool perform much better!
-And special thanks to everyone in the [Discord channel](https://discord.gg/TFc3hKD) for providing advice and support, I have learned a lot!
+And special thanks to everyone in the [Discord channel](https://discord.gg/TFc3hKD) for providing advice and support, I keep learning new things from y'all!
