@@ -33,6 +33,30 @@ function eraseText1() {
     document.getElementById("textarea3").value = "";
 }
 
+//Save textarea content as .txt file
+function saveTextAsFile() {
+    var textToWrite = document.getElementById('textarea3').value;
+    var textFileAsBlob = new Blob([textToWrite], { type: 'text/plain' });
+    var downloadLink = document.createElement("a");
+
+    downloadLink.download = "yourScript.js";
+    
+    if (window.webkitURL != null) {
+        downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+    }
+    else {
+        downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+        downloadLink.onclick = destroyClickedElement;
+        downloadLink.style.display = "none";
+        document.body.appendChild(downloadLink);
+    }
+
+    downloadLink.click();
+}
+
+var button = document.getElementById('save');
+button.addEventListener('click', saveTextAsFile);
+
 //Insert to textarea onclick
 var isChrome = !!window.chrome && !!window.chrome.webstore;
 var mapObj = {
