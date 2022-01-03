@@ -1,8 +1,8 @@
 //NS1 to NS2 Converter
 function fixTex999tarea(textarea) {
     textarea.value = textarea.value
-        .replaceAll("ns.asleep (", "await ns.asleep(")
-        .replaceAll("ns.asleep(", "await ns.asleep(")
+        .replaceAll("ns.sleep (", "await ns.sleep(")
+        .replaceAll("ns.sleep(", "await ns.sleep(")
         .replaceAll("ns.grow (", "await ns.grow(")
         .replaceAll("ns.grow(", "await ns.grow(")
         .replaceAll("ns.hack (", "await ns.hack(")
@@ -23,8 +23,8 @@ function fixTex999tarea(textarea) {
         .replaceAll("args[", "ns.args[")
         .replaceAll("alert (", "ns.alert(")
         .replaceAll("alert(", "ns.alert(")
-        .replaceAll("asleep (", "await ns.asleep(")
-        .replaceAll("asleep(", "await ns.asleep(")
+        .replaceAll("sleep (", "await ns.sleep(")
+        .replaceAll("sleep(", "await ns.sleep(")
         .replaceAll("atExit (", "ns.atExit(")
         .replaceAll("atExit(", "ns.atExit(")
         .replaceAll("brutessh (", "ns.brutessh(")
@@ -197,8 +197,8 @@ function fixTex999tarea(textarea) {
         .replaceAll("scriptRunning(", "ns.scriptRunning(")
         .replaceAll("serverExists (", "ns.serverExists(")
         .replaceAll("serverExists(", "ns.serverExists(")
-        .replace(/\bsleep\s*\(/g, "ns.sleep(")
-        .replace(/\bsleep*\(/g, "ns.sleep(")
+        .replace(/\bsleep\s*\(/g, "await ns.sleep(")
+        .replace(/\bsleep*\(/g, "await ns.sleep(")
         .replaceAll("spawn (", "ns.spawn(")
         .replaceAll("spawn(", "ns.spawn(")
         .replace(/\bsprintf\s*\(/g, "ns.sprintf(")
