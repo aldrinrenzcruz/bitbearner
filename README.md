@@ -17,6 +17,8 @@ If you want to convert a `.script` to `.js`, simply click the <b>Convert NS1 to 
 
 Note: Avoid using `.ns` extension for your scripts, since it's deprecated.
 
+If you've manually updated some parts in your script from `ns1` to `ns2`, it would be better to convert it first from `ns2` to `ns1` before proceeding to convert it completely to `ns2`.
+
 How this tool works is by simply adding/deling `ns.` in every Netscript functions. It also add/delete `await` if necessary. Lastly, it will automatically wrap the whole script inside the `main function`.
 
 Feel free to use and reuse anything in this tool.
