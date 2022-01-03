@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
 html {
     overflow-y: auto;
     box-sizing: border-box;
@@ -21,6 +26,10 @@ html {
 ::-webkit-scrollbar-track {
     background: #555;
     cursor: pointer;
+}
+
+canvas {
+    display: block;
 }
 
 body {
@@ -90,7 +99,7 @@ textarea {
     font-size: 18px !important;
     resize: both;
     max-width: 100%;
-    height: 60vh;
+    height: 57vh;
 }
 
 .save-btn {

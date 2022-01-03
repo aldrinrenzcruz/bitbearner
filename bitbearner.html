@@ -33,7 +33,8 @@
             <div class="col-lg-10 mx-auto">
                 <div class="main-card shadow rounded overflow-hidden">
                     <nav class="navbar navbar-expand-sm navbar-bg donothighlight">
-                        <span class="navbar-brand mb-0 h1 ms-3 nav-title">> Bitbearner<span class="blink-txt">_</span></span>
+                        <span class="navbar-brand mb-0 h1 ms-3 nav-title">> Bitbearner<span
+                                class="blink-txt">_</span></span>
                     </nav>
 
                     <form class="mx-3 mt-3" name="editorial">
@@ -42,16 +43,20 @@
                     </form>
 
                     <div class="text-center mt-4 mb-3 donothighlight">
-                        <button class="btn convert-button" id="ns1-to-ns2" onclick="fixtext999()"><i class="bi bi-arrow-repeat"></i> Convert NS1 to NS2</button>
-                        <button class="btn convert-button" id="ns2-to-ns1" onclick="fixtext998()"><i class="bi bi-arrow-repeat"></i> Convert NS2 to NS1</button>
+                        <button class="btn convert-button" id="ns1-to-ns2" onclick="fixtext999()"><i
+                                class="bi bi-arrow-repeat"></i> Convert NS1 to NS2</button>
+                        <button class="btn convert-button" id="ns2-to-ns1" onclick="fixtext998()"><i
+                                class="bi bi-arrow-repeat"></i> Convert NS2 to NS1</button>
                         <!-- <button class="btn insert-button cbtn" id="main-ns"><i class="bi bi-arrow-bar-up"></i> Insert main(ns) function</button> -->
-                        <button class="btn copy-button" onclick="copy1();"><i class="bi bi-clipboard-check"></i> Copy</button>
-                        <button class="btn delete-button" onclick="eraseText1();"><i class="bi bi-trash"></i> Clear</button>
+                        <button class="btn copy-button" onclick="copy1();"><i class="bi bi-clipboard-check"></i>
+                            Copy</button>
+                        <button class="btn delete-button" onclick="eraseText1();"><i class="bi bi-trash"></i>
+                            Clear</button>
                     </div>
 
                     <div class="donothighlight">
                         <p class="ms-3 mt-5 mb-0 footertext-1">Bitbearner v0.0.3 </p>
-                        <!-- <p class="ms-3 mb-0"><a class="footertext-1" data-bs-toggle="modal" data-bs-target="#read-note-modal">Read this note</a></p> -->
+                        <p class="ms-3 mb-0"><a class="footertext-1" href="https://github.com/ixwrites/bitbearner" data-bs-toggle="modal" data-bs-target="#anchor-idle-background" accesskey="b">Enter Bitnode</a></p>
                         <p class="ms-3 mb-0"><a class="footertext-1" href="https://github.com/ixwrites/bitbearner">Github</a></p>
                         <p class="ms-3 mb-0"><a class="footertext-1" href="https://github.com/xRalic/NS1-to-NS2-Guide">Ralic's NS1-to-NS2 guide</a></p>
                         <p class="ms-3 mb-0"><a class="footertext-1" href="https://github.com/danielyxie/bitburner/blob/dev/markdown/bitburner.ns.md">Netscript functions</a></p>
@@ -62,16 +67,16 @@
         </div>
     </div>
 
-    <div class="modal fade" id="read-note-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal fade" id="anchor-idle-background" tabindex="-1" aria-labelledby="anchor-idle-backgroundLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
-                <div class="modal-body">
-                    <p class="modal-title" id="exampleModalLabel">temporary-workaround.script</p>
-                    <img class="img-fluid" src="temporary-workaround.png" />
-                </div>
+
+                <canvas></canvas>
+
             </div>
         </div>
     </div>
+
 
     <script src="externals/scripts/popper.min.js"></script>
     <script src="externals/scripts/bootstrap.min.js"></script>
@@ -79,6 +84,49 @@
     <script src="externals/scripts/ns1-to-ns2.js"></script>
     <script src="externals/scripts/ns2-to-ns1.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6C4L35DRNY"></script>
+
+    <script>
+        // Initialising the canvas
+        var canvas = document.querySelector('canvas'),
+            ctx = canvas.getContext('2d');
+
+        // Setting the width and height of the canvas
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Setting up the letters
+        var letters = 'ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ';
+        letters = letters.split('');
+
+        // Setting up the columns
+        var fontSize = 10,
+            columns = canvas.width / fontSize;
+
+        // Setting up the drops
+        var drops = [];
+        for (var i = 0; i < columns; i++) {
+            drops[i] = 1;
+        }
+
+        // Setting up the draw function
+        function draw() {
+            ctx.fillStyle = 'rgba(0, 0, 0, .1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            for (var i = 0; i < drops.length; i++) {
+                var text = letters[Math.floor(Math.random() * letters.length)];
+                ctx.fillStyle = '#0f0';
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                drops[i]++;
+                if (drops[i] * fontSize > canvas.height && Math.random() > .95) {
+                    drops[i] = 0;
+                }
+            }
+        }
+
+        // Loop the animation
+        setInterval(draw, 33);
+    </script>
+
     <script>
         window.dataLayer = window.dataLayer || [];
 
