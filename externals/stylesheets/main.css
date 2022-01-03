@@ -1,21 +1,33 @@
-html { 
-    overflow-y: auto; 
+html {
+    overflow-y: auto;
     box-sizing: border-box;
 }
+
 ::-webkit-scrollbar {
-	width: .8rem;
-	height: 0rem;
+    width: .8rem;
+    height: 0rem;
 }
-::-webkit-scrollbar-thumb { background: #333; cursor: pointer; }
 
-::-webkit-scrollbar-thumb:hover { background: #444; cursor: pointer;}
+::-webkit-scrollbar-thumb {
+    background: #333;
+    cursor: pointer;
+}
 
-::-webkit-scrollbar-track { background: #555; cursor: pointer; }
+::-webkit-scrollbar-thumb:hover {
+    background: #444;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+    background: #555;
+    cursor: pointer;
+}
 
 body {
     background-image: url("https://bitbearner.netlify.app/externals/imgs/background-img1.png");
     background-repeat: repeat;
 }
+
 .navbar {
     background-color: #121415;
     border-radius: 0.250rem 0.250rem 0 0;
@@ -25,16 +37,18 @@ body {
     border-right: 1px solid #333 !important;
     font-family: Courier;
 }
+
 .main-card {
     background-color: #0c0d0e;
     border-left: 1px solid #333 !important;
     border-right: 1px solid #333 !important;
     border-bottom: 1px solid #333 !important;
-    
 }
+
 a {
     cursor: pointer;
 }
+
 img {
     -webkit-user-drag: none;
     user-select: none;
@@ -42,20 +56,34 @@ img {
     -webkit-user-select: none;
     -ms-user-select: none;
 }
-.bi { vertical-align: 0.125em; }
+
+.bi {
+    vertical-align: 0.125em;
+}
 
 .donothighlight {
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
+
+.blink-txt {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
 textarea {
     background-color: #121415 !important;
     outline: none;
-    box-shadow:none !important;
-    border:1px solid #333 !important;
+    box-shadow: none !important;
+    border: 1px solid #333 !important;
     border-radius: 0 !important;
     font-family: Courier;
     color: #f0f0f0 !important;
@@ -64,18 +92,22 @@ textarea {
     max-width: 100%;
     height: 60vh;
 }
+
 .save-btn {
     text-decoration: none;
     color: #888;
 }
+
 .save-hover {
     color: #21a821;
 }
+
 .nav-title {
     color: #21a821;
     font-size: 21px;
     font-family: "Lucida Console", "Lucida Sans Unicode", "Fira Mono", Consolas, "Courier New", Courier, monospace, "Times New Roman";
 }
+
 .convert-button {
     border: 1px solid;
     border-color: #555;
@@ -89,16 +121,19 @@ textarea {
     margin-bottom: 10px;
     font-family: "Lucida Console", "Lucida Sans Unicode", "Fira Mono", Consolas, "Courier New", Courier, monospace, "Times New Roman";
 }
+
 .convert-button:hover {
     -webkit-filter: brightness(103%);
     filter: brightness(103%);
 }
+
 .convert-button:active {
     background-color: #e0f7fa;
     transform: translateY(1px);
     outline: none;
     box-shadow: 1px #666;
 }
+
 .insert-button {
     border: 1px solid;
     border-color: #555;
@@ -112,16 +147,19 @@ textarea {
     margin-bottom: 10px;
     font-family: "Lucida Console", "Lucida Sans Unicode", "Fira Mono", Consolas, "Courier New", Courier, monospace, "Times New Roman";
 }
+
 .insert-button:hover {
     -webkit-filter: brightness(103%);
     filter: brightness(103%);
 }
+
 .insert-button:active {
     background-color: #85d5fa;
     transform: translateY(1px);
     outline: none;
     box-shadow: 1px #666;
 }
+
 .copy-button {
     border: 1px solid;
     border-color: #555;
@@ -135,16 +173,19 @@ textarea {
     margin-bottom: 10px;
     font-family: "Lucida Console", "Lucida Sans Unicode", "Fira Mono", Consolas, "Courier New", Courier, monospace, "Times New Roman";
 }
+
 .copy-button:hover {
     -webkit-filter: brightness(103%);
     filter: brightness(103%);
 }
+
 .copy-button:active {
     background-color: #81c784;
     transform: translateY(1px);
     outline: none;
     box-shadow: 1px #666;
 }
+
 .delete-button {
     border: 1px solid;
     border-color: #555;
@@ -158,33 +199,41 @@ textarea {
     margin-bottom: 10px;
     font-family: "Lucida Console", "Lucida Sans Unicode", "Fira Mono", Consolas, "Courier New", Courier, monospace, "Times New Roman";
 }
+
 .delete-button:hover {
     -webkit-filter: brightness(105%);
     filter: brightness(105%);
 }
+
 .delete-button:active {
     background-color: #e77e7e;
     transform: translateY(1px);
     outline: none;
     box-shadow: 1px #666;
 }
+
 .footertext-1 {
     color: #616161;
     font-family: "Lucida Console", "Lucida Sans Unicode", "Fira Mono", Consolas, "Courier New", Courier, monospace, "Times New Roman";
 }
-a:hover { 
+
+a:hover {
     color: #21a821;
 }
+
 ::placeholder {
     color: #21a821 !important;
 }
+
 .modal-header {
     background-color: #121415;
 }
+
 .modal-title {
     color: #eee;
     font-family: Courier;
 }
+
 .modal-body {
     background-color: #0c0d0e;
     font-family: Courier;
