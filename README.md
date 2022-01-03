@@ -19,7 +19,7 @@ Note: Avoid using `.ns` extension for your scripts, since it's already deprecate
 
 If you've manually updated some parts in your script from `ns1` to `ns2`, it would be better to convert it first from `ns2` to `ns1` before proceeding to convert it completely to `ns2`.
 
-How this tool works is by simply adding/deling `ns.` in every Netscript functions. It also add/delete `await` if necessary. Lastly, it will automatically wrap the whole script inside the `main function`.
+Bitbearner works essentially, by simply adding/deleting `ns.` in every Netscript functions. It also adds/deletes `await` if necessary. Lastly, it will automatically wrap the whole script inside the `main(ns) function`.
 
 Feel free to use and reuse anything in this tool.
 
