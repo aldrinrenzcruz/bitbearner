@@ -234,8 +234,6 @@ function fixTex999tarea(textarea) {
         .replaceAll("writePort (", "await ns.writePort(")
         .replaceAll("writePort(", "await ns.writePort(")
         
-        
-        
         .replaceAll("bladeburner.", "ns.bladeburner.")
         .replaceAll("codingcontract.", "ns.codingcontract.")
         .replaceAll("corporation.", "ns.corporation.")
@@ -246,11 +244,6 @@ function fixTex999tarea(textarea) {
         .replaceAll("stanek.", "ns.stanek.")
         .replace(/\bstock./g, "ns.stock.")
         .replace(/\bui./g, "ns.ui.")
-
-
-
-
-
 
         .replaceAll("await await", "await")
         .replaceAll("await ns.ns.", "await")

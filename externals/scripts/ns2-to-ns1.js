@@ -232,7 +232,6 @@ function fixTex998tarea(textarea) {
         .replaceAll("ns.writePort (", "writePort (")
         .replaceAll("ns.writePort(", "writePort(")
 
-
         .replaceAll("ns.bladeburner.", "bladeburner.")
         .replaceAll("ns.codingcontract.", "codingcontract.")
         .replaceAll("ns.corporation.", "corporation.")
