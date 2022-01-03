@@ -15,7 +15,7 @@ Then, paste your script in the textarea:
 ```
 If you want to convert a `.script` to `.js`, simply click the <b>Convert NS1 to NS2</b> button. If it's the other way around, click the <b>Convert NS1 to NS2</b> button.
 
-Note: Avoid using `.ns` extension for your scripts, since it's deprecated.
+Note: Avoid using `.ns` extension for your scripts, since it's already deprecated.
 
 If you've manually updated some parts in your script from `ns1` to `ns2`, it would be better to convert it first from `ns2` to `ns1` before proceeding to convert it completely to `ns2`.
 
