@@ -40,7 +40,7 @@ function saveTextAsFile() {
     var downloadLink = document.createElement("a");
 
     downloadLink.download = "yourScript.js";
-    
+
     if (window.webkitURL != null) {
         downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
     }
