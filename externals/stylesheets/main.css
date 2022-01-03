@@ -42,6 +42,8 @@ img {
     -webkit-user-select: none;
     -ms-user-select: none;
 }
+.bi { vertical-align: 0.125em; }
+
 .donothighlight {
 	-moz-user-select: none;
 	-webkit-user-select: none;
@@ -69,12 +71,17 @@ textarea {
 .save-hover {
     color: #21a821;
 }
+.nav-title {
+    color: #21a821;
+    font-size: 21px;
+    font-family: Lucida Console;
+}
 .convert-button {
     border: 1px solid;
     border-color: #555;
     border-radius: 3px;
     padding: 10px 10px;
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;
     cursor: pointer;
     color: #000;
@@ -98,7 +105,7 @@ textarea {
     border-color: #555;
     border-radius: 3px;
     padding: 10px 10px;
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;
     cursor: pointer;
     color: #000;
@@ -122,7 +129,7 @@ textarea {
     border-color: #555;
     border-radius: 3px;
     padding: 10px 10px;
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;
     cursor: pointer;
     color: #000;
@@ -146,7 +153,7 @@ textarea {
     border-color: #555;
     border-radius: 3px;
     padding: 10px 10px;
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;
     cursor: pointer;
     color: #000;
@@ -167,7 +174,7 @@ textarea {
 }
 .footertext-1 {
     color: #616161;
-    font-family: Courier;
+    font-family: Lucida Console;
 }
 a:hover { 
     color: #21a821;
