@@ -38,7 +38,8 @@
                     </nav>
 
                     <form class="mx-3 mt-3" name="editorial">
-                        <textarea class="form-control mt-1" id="textarea3" spellcheck="false" placeholder='//Paste a script here...'></textarea>
+                        <textarea class="form-control mt-1" id="textarea3" spellcheck="false"
+                            placeholder='//Paste a script here...'></textarea>
                         <!-- <a class="float-end save-btn me-1" type="button" id="save">Save</a> -->
                     </form>
 
@@ -56,18 +57,26 @@
 
                     <div class="donothighlight">
                         <p class="ms-3 mt-5 mb-0 footertext-1">Bitbearner v0.0.3 </p>
-                        <p class="ms-3 mb-0"><a class="footertext-1" href="https://github.com/ixwrites/bitbearner">Github</a></p>
-                        <p class="ms-3 mb-0"><a class="footertext-1" href="https://github.com/xRalic/NS1-to-NS2-Guide">Ralic's NS1-to-NS2 guide</a></p>
-                        <p class="ms-3 mb-0"><a class="footertext-1" href="https://github.com/danielyxie/bitburner/blob/dev/markdown/bitburner.ns.md">Netscript functions</a></p>
-                        <p class="ms-3 mb-0"><a class="footertext-1" href="https://bitburner.readthedocs.io/en/latest/">Bitburner docs</a></p>
-                        <p class="ms-3 mb-5"><a class="footertext-1" href="https://github.com/ixwrites/bitbearner" data-bs-toggle="modal" data-bs-target="#anchor-idle-background" accesskey="b">Enter Bitnode</a></p>
+                        <p class="ms-3 mb-0"><a class="footertext-1"
+                                href="https://github.com/ixwrites/bitbearner">Github</a></p>
+                        <p class="ms-3 mb-0"><a class="footertext-1"
+                                href="https://github.com/xRalic/NS1-to-NS2-Guide">Ralic's NS1-to-NS2 guide</a></p>
+                        <p class="ms-3 mb-0"><a class="footertext-1"
+                                href="https://github.com/danielyxie/bitburner/blob/dev/markdown/bitburner.ns.md">Netscript
+                                functions</a></p>
+                        <p class="ms-3 mb-0"><a class="footertext-1"
+                                href="https://bitburner.readthedocs.io/en/latest/">Bitburner docs</a></p>
+                        <p class="ms-3 mb-5"><a class="footertext-1" href="https://github.com/ixwrites/bitbearner"
+                                data-bs-toggle="modal" data-bs-target="#anchor-idle-background" accesskey="b">Enter
+                                Bitnode</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="anchor-idle-background" tabindex="-1" aria-labelledby="anchor-idle-backgroundLabel" aria-hidden="true">
+    <div class="modal fade" id="anchor-idle-background" tabindex="-1" aria-labelledby="anchor-idle-backgroundLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
 
@@ -86,29 +95,18 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6C4L35DRNY"></script>
 
     <script>
-        // Initialising the canvas
         var canvas = document.querySelector('canvas'),
             ctx = canvas.getContext('2d');
-
-        // Setting the width and height of the canvas
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-
-        // Setting up the letters
         var letters = 'THEBITNODE日ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘBIGDｱﾎﾃﾏｹﾒｴｶｷﾑﾕﾗｾﾈｽﾀﾇHYDROFLAMEﾍｦｲｸｺｿﾁﾄﾉﾌﾔﾖﾙﾚﾛﾝ012345789Z:=*+-<>¦｜╌çﾘｸ';
         letters = letters.split('');
-
-        // Setting up the columns
         var fontSize = 10,
             columns = canvas.width / fontSize;
-
-        // Setting up the drops
         var drops = [];
         for (var i = 0; i < columns; i++) {
             drops[i] = 1;
         }
-
-        // Setting up the draw function
         function draw() {
             ctx.fillStyle = 'rgba(0, 0, 0, .1)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -122,8 +120,6 @@
                 }
             }
         }
-
-        // Loop the animation
         setInterval(draw, 33);
     </script>
 
