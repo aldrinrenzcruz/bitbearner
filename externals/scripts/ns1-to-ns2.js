@@ -231,7 +231,7 @@ function fixTex999tarea(textarea) {
         .replaceAll("write(", "await ns.write(")
         .replaceAll("writePort (", "await ns.writePort(")
         .replaceAll("writePort(", "await ns.writePort(")
-        
+
         .replaceAll("bladeburner.", "ns.bladeburner.")
         .replaceAll("codingcontract.", "ns.codingcontract.")
         .replaceAll("corporation.", "ns.corporation.")
@@ -252,19 +252,21 @@ function fixTex999tarea(textarea) {
         .replaceAll("ns.ns.", "ns.")
         .replaceAll("ns. ns.", "ns.")
 
-    // //If textarea has no "main(ns)" yet, add one
-    // if (!textarea.value.includes("main(ns)") && !textarea.value.includes("main (ns)")) {
-    //     textarea.value  = 'export async function main(ns) {\n' + textarea.value  + '\n}'
-    // }
-
-    // If textarea has no "@param" and "main(ns)" yet, add each etc.
+    // If textarea has no "@param" and "main(ns)" yet, add both etc.
     if (!textarea.value.includes("@param {NS}") && !textarea.value.includes("main (ns)") && !textarea.value.includes("main(ns)")) {
         textarea.value = '/** @param {NS} ns **/\nexport async function main(ns) {\n' + textarea.value + '\n}'
     }
 
-    // If textarea already has a "main(ns)", add only the "@param"
+    // If textarea has no "@param" but has "main(ns)", add "@param"
     if (!textarea.value.includes("@param {NS}") && (textarea.value.includes("main (ns)") || textarea.value.includes("main(ns)"))) {
         textarea.value = '/** @param {NS} ns **/\n' + textarea.value
+        textarea.value = textarea.value.replaceAll("\nexport async function main(ns) {", "export async function main(ns) {")
+    }
+
+    // If textarea has no "main(ns)" but has "@param", add "main(ns)"
+    if (textarea.value.includes("@param {NS}") && !textarea.value.includes("main (ns)") && !textarea.value.includes("main(ns)")) {
+        textarea.value = textarea.value.replaceAll("/** @param {NS} ns **/", "")
+        textarea.value = '/** @param {NS} ns **/\nexport async function main(ns) {\n' + textarea.value + '\n}'
     }
 
 };
