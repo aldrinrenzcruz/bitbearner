@@ -121,8 +121,6 @@ function fixTex999tarea(textarea) {
         .replaceAll("getServerSecurityLevel(", "ns.getServerSecurityLevel(")
         .replaceAll("getServerUsedRam (", "ns.getServerUsedRam(")
         .replaceAll("getServerUsedRam(", "ns.getServerUsedRam(")
-        .replaceAll("getTheme (", "ns.getTheme(")
-        .replaceAll("getTheme(", "ns.getTheme(")
         .replaceAll("getTimeSinceLastAug (", "ns.getTimeSinceLastAug(")
         .replaceAll("getTimeSinceLastAug(", "ns.getTimeSinceLastAug(")
         .replaceAll("getWeakenTime (", "ns.getWeakenTime(")
