@@ -74,21 +74,20 @@ textarea {
 .nav-title {
     color: #21a821;
     font-size: 21px;
-    font-family: Lucida Console;
+    font-family: "Lucida Console", "Lucida Sans Unicode", "Fira Mono", Consolas, "Courier New", Courier, monospace, "Times New Roman";
 }
 .convert-button {
     border: 1px solid;
     border-color: #555;
     border-radius: 3px;
     padding: 10px 10px;
-    font-size: 16px;
+    font-size: 15px;
     text-align: center;
     cursor: pointer;
     color: #000;
     background-color: #e0f2f1;
-    font-weight: bold;
     margin-bottom: 10px;
-    font-family: Courier;
+    font-family: "Lucida Console", "Lucida Sans Unicode", "Fira Mono", Consolas, "Courier New", Courier, monospace, "Times New Roman";
 }
 .convert-button:hover {
     -webkit-filter: brightness(103%);
@@ -105,14 +104,13 @@ textarea {
     border-color: #555;
     border-radius: 3px;
     padding: 10px 10px;
-    font-size: 16px;
+    font-size: 15px;
     text-align: center;
     cursor: pointer;
     color: #000;
     background-color: #86c5f9;
-    font-weight: bold;
     margin-bottom: 10px;
-    font-family: Courier;
+    font-family: "Lucida Console", "Lucida Sans Unicode", "Fira Mono", Consolas, "Courier New", Courier, monospace, "Times New Roman";
 }
 .insert-button:hover {
     -webkit-filter: brightness(103%);
@@ -129,14 +127,13 @@ textarea {
     border-color: #555;
     border-radius: 3px;
     padding: 10px 10px;
-    font-size: 16px;
+    font-size: 15px;
     text-align: center;
     cursor: pointer;
     color: #000;
     background-color: #81c784;
-    font-weight: bold;
     margin-bottom: 10px;
-    font-family: Courier;
+    font-family: "Lucida Console", "Lucida Sans Unicode", "Fira Mono", Consolas, "Courier New", Courier, monospace, "Times New Roman";
 }
 .copy-button:hover {
     -webkit-filter: brightness(103%);
@@ -153,14 +150,13 @@ textarea {
     border-color: #555;
     border-radius: 3px;
     padding: 10px 10px;
-    font-size: 16px;
+    font-size: 15px;
     text-align: center;
     cursor: pointer;
     color: #000;
     background-color: #e57373;
-    font-weight: bold;
     margin-bottom: 10px;
-    font-family: Courier;
+    font-family: "Lucida Console", "Lucida Sans Unicode", "Fira Mono", Consolas, "Courier New", Courier, monospace, "Times New Roman";
 }
 .delete-button:hover {
     -webkit-filter: brightness(105%);
@@ -174,7 +170,7 @@ textarea {
 }
 .footertext-1 {
     color: #616161;
-    font-family: Lucida Console;
+    font-family: "Lucida Console", "Lucida Sans Unicode", "Fira Mono", Consolas, "Courier New", Courier, monospace, "Times New Roman";
 }
 a:hover { 
     color: #21a821;
