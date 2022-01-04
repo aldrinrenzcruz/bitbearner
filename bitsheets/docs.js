@@ -376,6 +376,6 @@ export async function main(ns) {
         ns.tprintf(`- writePort`);
     }
     else if ([ns.args[0]] != key) {
-        ns.tprintf(`ERROR -\nInvalid or missing keyword; Try: run docs.js help / h / info / i`);
+        ns.tprintf(`ERROR -\nInvalid or missing key; Try: run docs.js help / h / info / i`);
     }
 }
