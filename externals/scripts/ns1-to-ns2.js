@@ -243,6 +243,21 @@ function fixTex999tarea(textarea) {
         .replace(/\bstock./g, "ns.stock.")
         .replace(/\bui./g, "ns.ui.")
 
+        .replaceAll("await ns.brutessh (", "ns.brutessh(")
+        .replaceAll("await ns.brutessh(", "ns.brutessh(")
+        .replaceAll("await ns.ftpcrack (", "ns.ftpcrack(")
+        .replaceAll("await ns.ftpcrack(", "ns.ftpcrack(")
+        .replaceAll("await ns.relaysmtp (", "ns.relaysmtp(")
+        .replaceAll("await ns.relaysmtp(", "ns.relaysmtp(")
+        .replaceAll("await ns.httpworm (", "ns.httpworm(")
+        .replaceAll("await ns.httpworm(", "ns.httpworm(")
+        .replaceAll("await ns.sqlinject (", "ns.sqlinject(")
+        .replaceAll("await ns.sqlinject(", "ns.sqlinject(")
+        .replaceAll("await ns.nuke (", "ns.nuke(")
+        .replaceAll("await ns.nuke(", "ns.nuke(")
+        .replaceAll("await ns.exec (", "ns.exec(")
+        .replaceAll("await ns.exec(", "ns.exec(")
+
         .replaceAll("await await", "await")
         .replaceAll("await ns.ns.", "await")
         .replaceAll("ns.await", "ns.")
@@ -252,6 +267,23 @@ function fixTex999tarea(textarea) {
         .replaceAll("ns.ns.", "ns.")
         .replaceAll("ns. ns.", "ns.")
 
+        .replaceAll("awaitns.brutessh(", "ns.brutessh(")
+        .replaceAll("awaitns.ftpcrack(", "ns.ftpcrack(")
+        .replaceAll("awaitns.relaysmtp(", "ns.relaysmtp(")
+        .replaceAll("awaitns.httpworm(", "ns.httpworm(")
+        .replaceAll("awaitns.sqlinject(", "ns.sqlinject(")
+        .replaceAll("awaitns.nuke(", "ns.nuke(")
+        .replaceAll("awaitns.exec(", "ns.exec(")
+
+        .replaceAll("awaitbrutessh(", "ns.brutessh(")
+        .replaceAll("awaitftpcrack(", "ns.ftpcrack(")
+        .replaceAll("awaitrelaysmtp(", "ns.relaysmtp(")
+        .replaceAll("awaithttpworm(", "ns.httpworm(")
+        .replaceAll("awaitsqlinject(", "ns.sqlinject(")
+        .replaceAll("awaitnuke(", "ns.nuke(")
+        .replaceAll("awaitexec(", "ns.exec(")
+        .replaceAll("await await ns.scp(", "await ns.scp(")
+        
     // If textarea has no "@param" and "main(ns)" yet, add both etc.
     if (!textarea.value.includes("@param {NS}") && !textarea.value.includes("main (ns)") && !textarea.value.includes("main(ns)")) {
         textarea.value = '/** @param {NS} ns **/\nexport async function main(ns) {\n' + textarea.value + '\n}'
