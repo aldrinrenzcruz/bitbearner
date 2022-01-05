@@ -25,7 +25,6 @@ Feel free to use and reuse anything in this tool.
 ## Limitations & stuff to improve
 
 These will have to be changed manually:
-- addition/deletion of `args` in a function like `(args)`
 - deletion of `import` and `export` when converting NS2 to NS1
 - wrapping of additional `async functions`
 
