@@ -3,6 +3,9 @@ function fixTex998tarea(textarea) {
     textarea.value = textarea.value
         .replaceAll("ns.args [", "args [")
         .replaceAll("ns.args[", "args[")
+        .replaceAll("ns.args (", "args(")
+        .replaceAll("ns.args(", "args(")
+        .replaceAll("ns.args.", "args.")
         .replaceAll("ns.alert (", "alert(")
         .replaceAll("ns.alert(", "alert(")
         .replaceAll("ns.asleep (", "asleep(")
