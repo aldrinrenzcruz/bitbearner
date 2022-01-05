@@ -13,7 +13,6 @@ Then, paste your script in the textarea:
 ```js
 //Your code goes here
 ```
-If you want to convert a `.script` to `.js`, simply click the <b>Convert NS1 to NS2</b> button. If it's the other way around, click the <b>Convert NS2 to NS1</b> button.
 
 Note: Avoid using `.ns` extension for your scripts, since it's already deprecated.
 
