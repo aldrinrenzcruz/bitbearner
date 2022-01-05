@@ -23,6 +23,8 @@ function fixTex999tarea(textarea) {
         .replaceAll("args[", "ns.args[")
         .replaceAll("alert (", "ns.alert(")
         .replaceAll("alert(", "ns.alert(")
+        .replace(/\basleep\s*\(/g, "ns.asleep(")
+        .replace(/\basleep*\(/g, "ns.asleep(")
         .replaceAll("sleep (", "await ns.sleep(")
         .replaceAll("sleep(", "await ns.sleep(")
         .replaceAll("atExit (", "ns.atExit(")
