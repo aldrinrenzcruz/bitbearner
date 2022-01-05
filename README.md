@@ -34,7 +34,7 @@ TODO:
 - Add a text that shows whether the script in the textarea is `.script` or `.js` and probably do something about it
 - Add a syntax-highlighter
 
-If you have found bugs/ have suggestions or ideas, please feel free to raise a [Github issue](https://github.com/ixwrites/bitbearner/issues).
+If you have found bugs/ have suggestions or ideas, please feel free to let me know about it or by opening a [Github issue](https://github.com/ixwrites/bitbearner/issues).
 
 ## Resources
 If you're interested to learn more about Netscript, check out the ff:
