@@ -1,6 +1,12 @@
 /** @param {NS} ns **/
 export async function main(ns) {
 
+    const doc = eval("document");
+    const terminalInput = doc.getElementById("terminal-input");
+    terminalInput.value = "run docs.js ";
+    const handler = Object.keys(terminalInput)[1];
+    terminalInput[handler].onChange({ target: terminalInput });
+    
     var key = [
         "help", "h", "info", "i",
         "properties", "p",
