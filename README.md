@@ -24,6 +24,8 @@ Feel free to use and reuse anything in this tool.
 
 ## Limitations & stuff to improve
 
+- The NS2 => NS1 converter is a basic converter made for simple scripts only.
+
 These will have to be changed manually:
 - deletion of `import` and `export` when converting NS2 to NS1
 - wrapping of additional `async functions`
@@ -31,8 +33,7 @@ These will have to be changed manually:
 Note that only the first and main `export async function main(ns)` will be handled in the conversion.
 
 TODO:
-- Add a text that shows whether the script in the textarea is `.script` or `.js` and probably do something about it
-- Add a syntax-highlighter
+- Add a syntax highlighter
 
 If you have found bugs/ have suggestions or ideas, please feel free to let me know about it or by opening a [Github issue](https://github.com/ixwrites/bitbearner/issues).
 
