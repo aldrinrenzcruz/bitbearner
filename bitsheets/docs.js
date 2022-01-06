@@ -14,12 +14,12 @@ export async function main(ns) {
         "sleeve", "sl",
         "stanek", "sk",
         "stocks", "st",
-        "userinterface", "u",
+        "userinterface", "u", "ui",
         "ns2.await", "n"];
 
     var help = ["help", "h", "info", "i"];
-    var properties = ["properties", "p"];
-    var methods = ["methods", "m"];
+    var properties = ["properties", "p", "property"];
+    var methods = ["methods", "m", "method"];
     var bladeburner = ["bladeburner", "b"];
     var codingcontract = ["codingcontract", "cc"];
     var corp = ["corporation", "co"];
@@ -29,7 +29,7 @@ export async function main(ns) {
     var sleeve = ["sleeve", "sl"];
     var stanek = ["stanek", "sk"];
     var stocks = ["stocks", "st"];
-    var userinterface = ["userinterface", "u"];
+    var userinterface = ["userinterface", "u", "ui"];
     var ns2wait = ["ns2.await", "n"];
 
     if (help.includes(ns.args[0])) {
