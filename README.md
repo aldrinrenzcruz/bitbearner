@@ -3,11 +3,11 @@
 
 No more tiresome manual addition/deletion of `ns.` and `await`!
 
-- [Bitbearner](https://bitbearner.netlify.app/bitbearner/) is intended, mostly, for new players of Bitburner, who used `ns1` when starting out and now wants to switch to `ns2`.
+- [Bitbearner](https://bitbearner.netlify.app/) is intended, mostly, for new players of Bitburner, who used `ns1` when starting out and now wants to switch to `ns2`.
 - It can also be used when helping new players who are using `ns1`.
 
 ## How to use
-First, head over to https://bitbearner.netlify.app/bitbearner/
+First, head over to https://bitbearner.netlify.app/
 
 Then, paste your script in the textarea:
 ```js
