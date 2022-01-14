@@ -74,6 +74,8 @@ function fixTex999tarea(textarea) {
         .replaceAll("getHackingMultipliers(", "ns.getHackingMultipliers(")
         .replaceAll("getHacknetMultipliers (", "ns.getHacknetMultipliers(")
         .replaceAll("getHacknetMultipliers(", "ns.getHacknetMultipliers(")
+        .replaceAll("getHackTime (", "ns.getHackTime(")
+        .replaceAll("getHackTime(", "ns.getHackTime(")
         .replaceAll("getHostname (", "ns.getHostname(")
         .replaceAll("getHostname(", "ns.getHostname(")
         .replaceAll("getOwnedSourceFiles (", "ns.getOwnedSourceFiles(")
