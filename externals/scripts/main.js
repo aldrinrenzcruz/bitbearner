@@ -54,9 +54,6 @@ function saveTextAsFile() {
     downloadLink.click();
 }
 
-var button = document.getElementById('save');
-button.addEventListener('click', saveTextAsFile);
-
 //Insert to textarea onclick
 var isChrome = !!window.chrome && !!window.chrome.webstore;
 var mapObj = {

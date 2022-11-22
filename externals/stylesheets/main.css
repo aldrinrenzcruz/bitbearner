@@ -33,7 +33,7 @@ canvas {
 }
 
 body {
-    background-image: url("https://bitbearner.netlify.app/externals/imgs/background-img1.png");
+    background-color: #111;
     background-repeat: repeat;
 }
 
