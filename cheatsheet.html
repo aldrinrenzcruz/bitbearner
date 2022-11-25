@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bitburner Cheatsheet">
+  <meta name="author" content="Arc">
+  <title>Bitburner Cheatsheet</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="externals/icons/bootstrap/bootstrap-icons.css">
+  <script src="assets/js/jquery-3.6.1.min.js"></script>
+  <link rel="shortcut icon" href="externals/imgs/favicon.png">
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"> -->
+
+  <style>
+
+  </style>
+
+</head>
+
+<body>
+
+  <div id="table-1-data"></div>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const allQuickLinks = {
+      'list': [
+        {
+          'name': 'HR Teamware',
+          'title': 'HR Teamware',
+          'favicon': '',
+          'url': 'https://secure.hrteamware.com/login/index.htm',
+          'tags': 'Login, Logout, Log-in, Log in, Log-out Log out',
+          'attributes': 'rel="noopener noreferrer" target="_blank"',
+          'onclick': '',
+          'header': '',
+          'eclass': '',
+          'access': '',
+        },
+        {
+          'name': 'NRS Table',
+          'title': 'NRS Table of Titles and Chapters (for Added)',
+          'favicon': '',
+          'url': 'https://www.leg.state.nv.us/NRS/',
+          'tags': 'NV Clipsheets, Clip sheets, Nevada, User Guides, NRS Table, NRS Table of Titles and Chapters (for Added)',
+          'attributes': 'rel="noopener noreferrer" target="_blank"',
+          'onclick': '',
+          'header': '',
+          'eclass': '',
+          'access': '',
+        },
+      ]
+    };
+    const allQuickLinksTemplate = ({
+      header,
+      name,
+      title,
+      favicon,
+      url,
+      tags,
+      attributes,
+      onclick,
+      eclass,
+      access,
+    }) => `${header}
+    <div class="card link-container link-filterable ${access}">
+      <img class="link-img" src="${favicon}" />
+      <a class="link-title stretched-link ${eclass}" href="${url}" ${attributes} onclick="simulateClickonMenuCloseBtn(); ${onclick}" title="${title}">${name} <span class="h-0">${tags}, ${title}, ${url}</span></a>
+    </div>`;
+    const generateAllQuickLinks = allQuickLinks.list.map(allQuickLinksTemplate);
+    document.getElementById("table-1-data").innerHTML = generateAllQuickLinks.join("")
+  </script>
+
+</body>
+
+</html>
